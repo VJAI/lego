@@ -1,0 +1,94 @@
+lego-switch {
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: $switch-width;
+    height: $switch-height;
+    line-height: initial;
+
+    & .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $light-gray;
+      -webkit-transition: $switch-transition;
+      transition: $switch-transition;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 0.8125rem;
+        width: 0.8125rem;
+        top: 1px;
+        left: 1px;
+        bottom: 3px;
+        background-color: white;
+        transition: $switch-transition;
+      }
+
+      &.round {
+        border-radius: 0.625rem;
+
+        &:before {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    & input[type="checkbox"] {
+
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      input[type="checkbox"] {
+        opacity: 0;
+      }
+      input[type="checkbox"] + label {
+        outline: 0;
+        user-select: none;
+      }
+
+      &:checked {
+        & + .slider {
+          background-color: $secondary;
+
+          &:before {
+            -webkit-transform: translateX(1.3125rem);
+            -ms-transform: translateX(1.3125rem);
+            transform: translateX(1.3125rem);
+          }
+
+          & .active {
+            display: block;
+          }
+
+          & .inactive {
+            display: none;
+          }
+        }
+      }
+
+      &:disabled + .slider {
+        cursor: default;
+        background-color: $disable-text;
+      }
+    }
+
+    .active {
+      display: none;
+    }
+
+    .active, .inactive {
+      color: $mid-gray;
+      position: absolute;
+      font-size: $font-size-base;
+      left: 100%;
+      margin-left: 0.3125rem;
+      text-transform: uppercase;
+    }
+  }
+}

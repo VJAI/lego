@@ -1,0 +1,21 @@
+.color-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  .color-cell {
+    width: 4rem;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+
+  .color-code {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 1rem;
+  }
+
+  .color-name {
+    font-weight: bold;
+  }
+}

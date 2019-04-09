@@ -1,0 +1,16 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "lego"
+    ],
+    "component-selector": [
+      true,
+      ["element", "attribute"],
+      "lego",
+      "kebab-case"
+    ]
+  }
+}

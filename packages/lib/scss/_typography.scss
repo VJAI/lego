@@ -1,0 +1,144 @@
+@import url('//fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+/**
+  Headings
+ */
+h1, h2, h3, h4, h5, h6, .lego-h1, .lego-h2, .lego-h3, .lego-h4, .lego-h5, .lego-h6 {
+  font-family: $headings-font-family;
+  line-height: 1;
+}
+
+h1, .lego-h1 {
+  font-size: $h1-font-size;
+  font-weight: $font-weight-normal;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h2, .lego-h2 {
+  font-size: $h2-font-size;
+  font-weight: $font-weight-medium;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h3, .lego-h3 {
+  font-size: $h3-font-size;
+  font-weight: $font-weight-normal;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem
+}
+
+h4, .lego-h4 {
+  font-size: $h4-font-size;
+  font-weight: $font-weight-medium;
+  color: $mid-gray;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem
+}
+
+
+/**
+  Paragraphs
+ */
+p, .lego-body {
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  color: $body-text-color;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+/**
+  Links
+ */
+a,
+.lego-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: $link-normal-color;
+  border-bottom: dotted 1px $border-gray;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+    border-color: $link-hover-color;
+  }
+
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
+    border-color: $link-hover-color;
+  }
+
+  &:active {
+    color: $link-down-color;
+    border-color: $link-down-color;
+  }
+}
+
+/**
+  Captions and Labels.
+ */
+caption, label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: $mid-gray;
+}
+
+caption {
+  font-weight: $font-weight-normal;
+}
+
+label {
+  font-weight: $font-weight-medium;
+}
+
+/**
+  Other Text Styles.
+ */
+em {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: $font-weight-bold;
+}
+
+/**
+  Horizontal Rules
+ */
+hr {
+  margin-top: $hr-margin-y;
+  margin-bottom: $hr-margin-y;
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+}
+
+/**
+  Emphasis
+ */
+small,
+.lego-small {
+  font-size: $small-font-size;
+  font-weight: $font-weight-normal;
+}
+
+/**
+  Font weights
+ */
+.lego-medium {
+  font-weight: $font-weight-medium;
+}
+
+.lego-bold {
+  font-weight: $font-weight-bold;
+}
+
+/**
+  Formatted
+ */
+pre, code {
+  font-family: $font-family-monospace;
+}

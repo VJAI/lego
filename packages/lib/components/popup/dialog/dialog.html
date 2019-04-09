@@ -1,0 +1,20 @@
+<div role="dialog" class="lego-dialog">
+  <div class="dialog has-footer">
+    <lego-icon icon="Cross" (click)="close()"></lego-icon>
+
+    <div role="document" class="dialog-content">
+      <div class="dialog-header">
+        <lego-icon *ngIf="titleIcon" icon="{{titleIcon}}"></lego-icon>
+        <h3 class="dialog-title">
+          <ng-content select="lego-dialog-header"></ng-content>
+        </h3>
+      </div>
+      <div class="dialog-body" >
+        <ng-content select="lego-dialog-body"></ng-content>
+      </div>
+      <div class="dialog-footer">
+        <ng-content select="lego-dialog-footer"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

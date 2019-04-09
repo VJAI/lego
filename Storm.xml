@@ -1,0 +1,73 @@
+<code_scheme name="l.e.g.o" version="173">
+  <CssCodeStyleSettings>
+    <option name="HEX_COLOR_UPPER_CASE" value="true" />
+    <option name="HEX_COLOR_SHORT_FORMAT" value="true" />
+    <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
+  </CssCodeStyleSettings>
+  <JSCodeStyleSettings>
+    <option name="REFORMAT_C_STYLE_COMMENTS" value="true" />
+    <option name="FORCE_QUOTE_STYlE" value="true" />
+    <option name="ENFORCE_TRAILING_COMMA" value="Remove" />
+    <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
+    <option name="SPACES_WITHIN_IMPORTS" value="true" />
+    <option name="IMPORT_SORT_MODULE_NAME" value="true" />
+  </JSCodeStyleSettings>
+  <MarkdownNavigatorCodeStyleSettings>
+    <option name="RIGHT_MARGIN" value="72" />
+  </MarkdownNavigatorCodeStyleSettings>
+  <TypeScriptCodeStyleSettings>
+    <option name="REFORMAT_C_STYLE_COMMENTS" value="true" />
+    <option name="USE_DOUBLE_QUOTES" value="false" />
+    <option name="FORCE_QUOTE_STYlE" value="true" />
+    <option name="ENFORCE_TRAILING_COMMA" value="Remove" />
+    <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
+    <option name="SPACES_WITHIN_IMPORTS" value="true" />
+    <option name="IMPORT_SORT_MODULE_NAME" value="true" />
+  </TypeScriptCodeStyleSettings>
+  <codeStyleSettings language="CSS">
+    <indentOptions>
+      <option name="INDENT_SIZE" value="2" />
+      <option name="CONTINUATION_INDENT_SIZE" value="2" />
+      <option name="TAB_SIZE" value="2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="JavaScript">
+    <option name="BLANK_LINES_AROUND_FIELD" value="1" />
+    <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
+    <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
+    <indentOptions>
+      <option name="INDENT_SIZE" value="2" />
+      <option name="CONTINUATION_INDENT_SIZE" value="2" />
+      <option name="TAB_SIZE" value="2" />
+    </indentOptions>
+    <arrangement>
+      <groups>
+        <group>
+          <type>GROUP_PROPERTY_FIELD_WITH_GETTER_SETTER</type>
+          <order>KEEP</order>
+        </group>
+        <group>
+          <type>OVERRIDDEN_METHODS</type>
+          <order>KEEP</order>
+        </group>
+      </groups>
+    </arrangement>
+  </codeStyleSettings>
+  <codeStyleSettings language="SCSS">
+    <indentOptions>
+      <option name="CONTINUATION_INDENT_SIZE" value="2" />
+      <option name="TAB_SIZE" value="2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="TypeScript">
+    <option name="BLANK_LINES_AROUND_FIELD" value="1" />
+    <option name="BLANK_LINES_AROUND_FIELD_IN_INTERFACE" value="0" />
+    <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
+    <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
+    <indentOptions>
+      <option name="INDENT_SIZE" value="2" />
+      <option name="CONTINUATION_INDENT_SIZE" value="2" />
+      <option name="TAB_SIZE" value="2" />
+    </indentOptions>
+  </codeStyleSettings>
+</code_scheme>

@@ -1,0 +1,151 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "lego": {
+      "root": "packages/lib",
+      "sourceRoot": "packages/lib",
+      "projectType": "library",
+      "prefix": "leg",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "packages/lib/tsconfig.lib.json",
+            "project": "packages/lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "packages/lib/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "packages/lib/test.ts",
+            "tsConfig": "packages/lib/tsconfig.spec.json",
+            "karmaConfig": "packages/lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "packages/lib/tsconfig.lib.json",
+              "packages/lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "demo": {
+      "root": "",
+      "sourceRoot": "demo",
+      "projectType": "application",
+      "prefix": "demo",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/demo",
+            "index": "demo/index.html",
+            "main": "demo/main.ts",
+            "polyfills": "demo/polyfills.ts",
+            "tsConfig": "demo/tsconfig.app.json",
+            "assets": [
+              "demo/favicon.ico",
+              "demo/assets"
+            ],
+            "styles": [
+              "demo/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./packages/lib/scss"
+                //"./dist/l.e.g.o/scss"
+              ]
+            },
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "demo/environment.ts",
+                  "with": "demo/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "demo/test.ts",
+            "polyfills": "demo/polyfills.ts",
+            "tsConfig": "demo/tsconfig.spec.json",
+            "karmaConfig": "demo/karma.conf.js",
+            "styles": [
+              "demo/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "demo/favicon.ico",
+              "demo/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "demo/tsconfig.app.json",
+              "demo/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "demo"
+}

@@ -1,0 +1,299 @@
+<h1>Tabs</h1>
+
+<div class="topic-container">
+  <div class="topic-main">
+
+    <h2 id="overview">Overview</h2>
+
+    <p>
+      Tabs component is used to group information such that one piece of information is displayed at a time.
+    </p>
+
+    <h2 id="examples">Examples</h2>
+
+    <h3 id="left-aligned">Left Aligned Tabs</h3>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-tabs>
+          <lego-tab heading="Einstein">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science.
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+          <lego-tab heading="Newton">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Sir Isaac Newton FRS PRS was an English mathematician, physicist, astronomer, theologian, and author who is widely recognised as one of the most influential scientists of all time, and a key figure in the scientific revolution.
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+          <lego-tab heading="Galileo">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Galileo Galilei was an Italian astronomer, physicist and engineer, sometimes described as a polymath. Galileo has been called the "father of observational astronomy", the "father of modern physics", the "father of the scientific method", and the "father of modern science".
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+          <lego-tab heading="Kalam">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Avul Pakir Jainulabdeen Abdul Kalam was an Indian Tamil politician and aerospace scientist who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering.
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+        </lego-tabs>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-tabs&gt;
+  &lt;lego-tab heading="Einstein"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science.
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+  &lt;lego-tab heading="Newton"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Sir Isaac Newton FRS PRS was an English mathematician, physicist, astronomer, theologian, and author who is widely recognised as one of the most influential scientists of all time, and a key figure in the scientific revolution.
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+  &lt;lego-tab heading="Galileo"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Galileo Galilei was an Italian astronomer, physicist and engineer, sometimes described as a polymath. Galileo has been called the "father of observational astronomy", the "father of modern physics", the "father of the scientific method", and the "father of modern science".
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+  &lt;lego-tab heading="Kalam"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Avul Pakir Jainulabdeen Abdul Kalam was an Indian Tamil politician and aerospace scientist who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering.
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+&lt;/lego-tabs&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="center-aligned">Center Aligned Tabs</h3>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-tabs tabs-align="center">
+          <lego-tab heading="Einstein">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science.
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+          <lego-tab heading="Newton">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Sir Isaac Newton FRS PRS was an English mathematician, physicist, astronomer, theologian, and author who is widely recognised as one of the most influential scientists of all time, and a key figure in the scientific revolution.
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+          <lego-tab heading="Galileo">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Galileo Galilei was an Italian astronomer, physicist and engineer, sometimes described as a polymath. Galileo has been called the "father of observational astronomy", the "father of modern physics", the "father of the scientific method", and the "father of modern science".
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+          <lego-tab heading="Kalam">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Avul Pakir Jainulabdeen Abdul Kalam was an Indian Tamil politician and aerospace scientist who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering.
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+        </lego-tabs>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-tabs tabs-align="center"&gt;
+  &lt;lego-tab heading="Einstein"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science.
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+  &lt;lego-tab heading="Newton"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Sir Isaac Newton FRS PRS was an English mathematician, physicist, astronomer, theologian, and author who is widely recognised as one of the most influential scientists of all time, and a key figure in the scientific revolution.
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+  &lt;lego-tab heading="Galileo"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Galileo Galilei was an Italian astronomer, physicist and engineer, sometimes described as a polymath. Galileo has been called the "father of observational astronomy", the "father of modern physics", the "father of the scientific method", and the "father of modern science".
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+  &lt;lego-tab heading="Kalam"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Avul Pakir Jainulabdeen Abdul Kalam was an Indian Tamil politician and aerospace scientist who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering.
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+&lt;/lego-tabs&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="right-aligned">Right Aligned Tabs</h3>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-tabs tabs-align="right">
+          <lego-tab heading="Einstein">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science.
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+          <lego-tab heading="Newton">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Sir Isaac Newton FRS PRS was an English mathematician, physicist, astronomer, theologian, and author who is widely recognised as one of the most influential scientists of all time, and a key figure in the scientific revolution.
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+          <lego-tab heading="Galileo">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Galileo Galilei was an Italian astronomer, physicist and engineer, sometimes described as a polymath. Galileo has been called the "father of observational astronomy", the "father of modern physics", the "father of the scientific method", and the "father of modern science".
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+          <lego-tab heading="Kalam">
+            <ng-template>
+              <demo-tabs-container>
+                <p>
+                  Avul Pakir Jainulabdeen Abdul Kalam was an Indian Tamil politician and aerospace scientist who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering.
+                </p>
+              </demo-tabs-container>
+            </ng-template>
+          </lego-tab>
+        </lego-tabs>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-tabs tabs-align="right"&gt;
+  &lt;lego-tab heading="Einstein"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science.
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+  &lt;lego-tab heading="Newton"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Sir Isaac Newton FRS PRS was an English mathematician, physicist, astronomer, theologian, and author who is widely recognised as one of the most influential scientists of all time, and a key figure in the scientific revolution.
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+  &lt;lego-tab heading="Galileo"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Galileo Galilei was an Italian astronomer, physicist and engineer, sometimes described as a polymath. Galileo has been called the "father of observational astronomy", the "father of modern physics", the "father of the scientific method", and the "father of modern science".
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+  &lt;lego-tab heading="Kalam"&gt;
+    &lt;ng-template&gt;
+      &lt;demo-tabs-container&gt;
+        &lt;p&gt;
+          Avul Pakir Jainulabdeen Abdul Kalam was an Indian Tamil politician and aerospace scientist who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering.
+        &lt;/p&gt;
+      &lt;/demo-tabs-container&gt;
+    &lt;/ng-template&gt;
+  &lt;/lego-tab&gt;
+&lt;/lego-tabs&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+  </div>
+
+  <div class="topic-sidenav">
+    <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/tabs']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/tabs']" fragment="examples">Examples</a>
+        <ul>
+          <li>
+            <a [routerLink]="['/demo/tabs']" fragment="left-aligned">Left Aligned Tabs</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/tabs']" fragment="center-aligned">Center Aligned Tabs</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/tabs']" fragment="right-aligned">Right Aligned Tabs</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+

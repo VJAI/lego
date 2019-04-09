@@ -1,0 +1,80 @@
+.input-wrapper {
+  position: relative;
+  min-width: $input-min-width;
+  padding: 0.5rem 0 1.5rem;
+
+  .input {
+    position: relative;
+    margin: 0;
+    outline: none;
+
+    input, textarea {
+      font-size: $font-size-base;
+      font-family: inherit;
+      color: $input-color;
+      background-color: transparent;
+      background-clip: border-box;
+      outline: none;
+      cursor: pointer;
+    }
+
+    input {
+      width: 100%;
+      line-height: $input-line-height;
+      border: none;
+      border-bottom: $input-border-width solid $border-gray;
+      text-overflow: ellipsis;
+      white-space: normal;
+      overflow: hidden;
+
+      &:focus {
+        border-color: $secondary;
+      }
+
+      &:read-only {
+        border-bottom: none;
+      }
+
+      &::-ms-clear {
+        display: none;
+      }
+
+      &[type=number]::-webkit-inner-spin-button,
+      &[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
+
+      &:disabled {
+        cursor: default;
+        color: $disable-text;
+      }
+
+      &.error {
+        border-bottom: 1px solid $error;
+      }
+    }
+
+    .label-text {
+      display: flex;
+      color: $text-gray;
+      font-weight: $font-weight-bold;
+      height: $label-height;
+      line-height: $label-line-height;
+      font-size: $label-font-size;
+      letter-spacing: $label-letter-spacing;
+      margin-left: 2px;
+      margin-bottom: 4px;
+    }
+
+    &.required label:after {
+      color: $error;
+      content: "*";
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
+      position: relative;
+      left: 3px;
+      bottom: 3px;
+    }
+  }
+}
+

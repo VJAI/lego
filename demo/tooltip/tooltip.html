@@ -1,0 +1,80 @@
+<h1>Tooltip</h1>
+
+<div class="topic-container">
+  <div class="topic-main">
+
+    <h2 id="overview">Overview</h2>
+
+    <p>
+      Tooltips helps to display additional information.
+    </p>
+
+    <h2 id="example">Example</h2>
+
+    <p>
+      You can enable tooltip on a component or element by passing text to <code>lego-tooltip</code> attribute.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-button lego-tooltip="l.e.g.o is the best UI library ever made">Know More</lego-button>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-button lego-tooltip="l.e.g.o is the best UI library ever made">&gt;Know More&lt;/lego-button&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="dark-mode">Dark Mode</h2>
+
+    <p>
+      You can enable dark mode by passing <code>dark-mode</code> attribute.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-button type="secondary" lego-tooltip="l.e.g.o is the best UI library ever made" dark-mode>Know More</lego-button>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-button type="secondary" lego-tooltip="l.e.g.o is the best UI library ever made">&gt;Know More&lt;/lego-button&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="maxlength">Maxlength</h2>
+
+    <p>
+      You can control the mexlength of the tooltip text by passing value to the <code>tooltip-length</code> attribute.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-button lego-tooltip="This is a lengthier text. This is a lengthier text. This is a lengthier text. This is a lengthier text. This is a lengthier text." [tooltip-length]="50">Know More</lego-button>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-button type="secondary" lego-tooltip="l.e.g.o is the best UI library ever made">&gt;Know More&lt;/lego-button&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+  </div>
+
+  <div class="topic-sidenav">
+    <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/tooltip']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/tooltip']" fragment="example">Example</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/tooltip']" fragment="dark-mode">Dark Mode</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/tooltip']" fragment="maxlength">Maxlength</a>
+      </li>
+    </ul>
+  </div>
+</div>

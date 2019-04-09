@@ -1,0 +1,37 @@
+lego-textarea {
+  .input {
+    textarea {
+      margin-top: $textarea-margin-y;
+      border: $input-border-width solid $border-gray;
+      padding: $textarea-padding;
+      width: 100%;
+      line-height: $input-line-height;
+      resize: none;
+
+      &:focus {
+        border-color: $secondary;
+      }
+
+      &:disabled {
+        border: $input-border-width solid $textarea-disabled-border;
+        color: $disable-text;
+        background: $disable-bg;
+      }
+
+      &::-webkit-input-placeholder,
+      &::-ms-input-placeholder {
+        color: $input-placeholder;
+      }
+    }
+
+    .counter {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 0.3125rem;
+      letter-spacing: 0.34px;
+      font-size: $counter-text-font-size;
+      color: $mid-gray;
+    }
+  }
+}

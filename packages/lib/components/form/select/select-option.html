@@ -1,0 +1,13 @@
+<ng-container *ngIf="!multiple">
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+</ng-container>
+<ng-container *ngIf="multiple">
+  <lego-checkbox [checked]="selected"></lego-checkbox>
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+</ng-container>
+
+<ng-template #content>
+  <div class="content-holder" lego-tooltip [on-demand]="true">
+    <ng-content></ng-content><ng-container *ngIf="value">{{inputValue}}</ng-container>
+  </div>
+</ng-template>

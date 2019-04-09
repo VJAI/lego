@@ -1,0 +1,50 @@
+$lego-assets-path: '../packages/lib/assets/' !default;
+
+@import '../packages/lib/index';
+
+.demo-container {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "h h"
+    "s m";
+  height: 100vh;
+  overflow: hidden;
+
+  lego-appbar {
+    grid-area: h;
+    position: static;
+  }
+
+  .demo-sidebar {
+    grid-area: s;
+    background-color: $secondary;
+    border-right: solid 1px #ccc;
+    overflow: auto;
+    font-size: 0.7rem;
+    font-family: $font-family-sans-serif;
+  }
+
+  .demo-main {
+    grid-area: m;
+    padding: 3rem 3rem 5rem 5rem;
+    overflow: auto;
+    background-color: $bg-gray;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .demo-container {
+    overflow: auto;
+    height: auto;
+
+    .demo-sidebar, .demo-main {
+      overflow: visible;
+
+      section h5, ul li a {
+        text-align: center;
+      }
+    }
+  }
+}

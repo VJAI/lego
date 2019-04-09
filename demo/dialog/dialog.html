@@ -1,0 +1,101 @@
+<h1>Dialog</h1>
+
+<div class="topic-container">
+  <div class="topic-main">
+
+    <h2 id="overview">Overview</h2>
+
+    <p>
+      Lego provides built-in dialogs like alert and confirm. You can also create custom dialogs.
+    </p>
+
+    <h2 id="alert">Alert Dialog</h2>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <a href="#" (click)="openAlert($event)">Open Alert Dialog</a>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;a href="#" (click)="openAlert($event)"&gt;Open Alert Dialog&lt;/a&gt;</code>
+</pre>
+      </demo-tab>
+      <demo-tab heading="TypeScript">
+<pre>
+<code>constructor(private dialog: DialogService) &#123;
+&#125;
+
+public openAlert(event: UIEvent) &#123;
+  event.preventDefault();
+  this.dialog.alert('Success', 'The changes to the post saved successfully!', MessageType.Success);
+&#125;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="confirm">Confirm Dialog</h2>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <a href="#" (click)="openConfirm($event)">Open Confirm Dialog</a>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;a href="#" (click)="openConfirm($event)"&gt;Open Confirm Dialog&lt;/a&gt;</code>
+</pre>
+      </demo-tab>
+      <demo-tab heading="TypeScript">
+<pre>
+<code>constructor(private dialog: DialogService) &#123;
+&#125;
+
+public openConfirm(event: UIEvent) &#123;
+  event.preventDefault();
+  this.dialog.confirm('Confirm Approval', 'Are you sure want to approve this contract?');
+&#125;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="custom">Custom Dialog</h2>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <a href="#" (click)="openCustom($event)">Open Custom Dialog</a>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;a href="#" (click)="openCustom($event)"&gt;Open Custom Dialog&lt;/a&gt;</code>
+</pre>
+      </demo-tab>
+      <demo-tab heading="TypeScript">
+<pre>
+<code>constructor(private dialog: DialogService) &#123;
+&#125;
+
+public openCustom(event: UIEvent) &#123;
+  event.preventDefault();
+  this.dialog.open(CustomDialogDemoComponent);
+&#125;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+  </div>
+
+  <div class="topic-sidenav">
+    <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/dialog']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/dialog']" fragment="alert">Alert Dialog</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/dialog']" fragment="confirm">Confirm Dialog</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/dialog']" fragment="custom">Custom Dialog</a>
+      </li>
+    </ul>
+  </div>
+</div>

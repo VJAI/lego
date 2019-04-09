@@ -1,0 +1,25 @@
+<div class="input-wrapper">
+  <div class="input" [class.required]="required">
+    <label class="label-text" for="{{id}}-input" *ngIf="label">{{label}}</label>
+    <input minlength="{{minLength}}"
+           maxlength="{{maxLength}}"
+           id="{{id}}-input"
+           placeholder="{{placeholder}}"
+           [required]="required"
+           type="{{datatype}}"
+           [attr.max]="maxValue ? maxValue : null"
+           [attr.min]="minValue ? minValue : null"
+           [attr.step]="step ? step : null"
+           [disabled]="disabled"
+           [readonly]="readonly"
+           [style.fontSize]="textboxSize"
+           [(ngModel)]="data"
+           [ngModelOptions]="{standalone: true}"
+           (change)="fireChangeEvent($event)"
+           (blur)="onTouched()"
+           (input)="onInput()"
+           [class.error]="showError">
+  </div>
+  <lego-error *ngIf="showError" [messages]="errors"></lego-error>
+</div>
+

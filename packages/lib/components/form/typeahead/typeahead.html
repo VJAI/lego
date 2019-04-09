@@ -1,0 +1,38 @@
+<div class="input-wrapper">
+  <div class="input" [class.required]="required" #dropreference>
+    <label class="label-text" for="{{id}}-input">{{label}}</label>
+    <input #input
+           id="{{id}}-input"
+           placeholder={{placeholder}}
+           [disabled]="disabled"
+           [class.error]="showError"
+           [(ngModel)]="searchText"
+           [ngModelOptions]="{standalone: true}"
+           (click)="showDropdown()"
+           (keydown)="onKeyDown($event)"
+           (input)="onInput($event)"
+           (blur)="onTouched()"
+           autocomplete="off">
+    <lego-icon *ngIf="!busy" class="search" icon="Search" (click)="onSearchIconClick($event)"></lego-icon>
+    <lego-spinner *ngIf="busy"></lego-spinner>
+    <lego-dropdown [reference]="dropreference" #dropdownComp>
+      <lego-typeahead-options class="{{containerCssClasses}}">
+        <lego-typeahead-option *ngFor="let record of searchResult" [item]="record" [id-string]="idString" [value-string]="valueString"></lego-typeahead-option>
+      </lego-typeahead-options>
+    </lego-dropdown>
+  </div>
+  <lego-error *ngIf="showError" [messages]="errors"></lego-error>
+  <div class="selected-options" *ngIf="multiple && selected && selected.length">
+    <div class="default-container" *ngIf="!selectedOptionsTemplate">
+      <div class="selected-option" *ngFor="let selectedItem of selectedItems">
+        <span>{{selectedItem[valueString]}}</span>
+        <span>
+        <lego-icon class="delete" icon="Cross" (click)="removeSelectedOption(selectedItem)"></lego-icon>
+      </span>
+      </div>
+    </div>
+    <ng-container *ngIf="selectedOptionsTemplate">
+      <ng-container [ngTemplateOutlet]="selectedOptionsTemplate"></ng-container>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+:host /deep/ {
+
+  .header img {
+    object-fit: cover;
+    height: 300px;
+  }
+
+  .footer h4 {
+    margin: 0; padding: 1rem 0 2rem 0.5rem;
+  }
+}

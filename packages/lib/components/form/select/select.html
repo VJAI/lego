@@ -1,0 +1,50 @@
+<div class="input-wrapper">
+  <div class="input" [class.required]="required" #dropreference>
+    <label *ngIf="label" class="label-text" for="{{id}}-input">{{label}}</label>
+    <input #input
+           id="{{id}}-input"
+           placeholder={{placeholder}}
+           [disabled]="disabled"
+           [class.error]="showError"
+           readonly
+           [value]="displayText"
+           (click)="showDropdown()"
+           (keydown)="onKeyDown($event)"
+           (blur)="onTouched()"
+           autocomplete="off">
+    <lego-icon class="dropdown-arrow" icon="Triangle_Down" (click)="onDropMenuIconClick($event)"></lego-icon>
+    <lego-dropdown [reference]="dropreference"
+                   #dropdownComp
+                   [sync-width]="syncWidth"
+                   [min-width]="minDropdownWidth"
+                   [max-width]="maxDropdownWidth"
+                   [css-classes]="dropdownCssClasses">
+      <div class="select-options-container {{containerCssClasses}}">
+        <ng-container *ngIf="!multiple">
+          <lego-select-option clear #clear class="clear-selection" *ngIf="showClearOption()">
+            {{clearText}}
+          </lego-select-option>
+          <ng-container *ngTemplateOutlet="content"></ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="multiple">
+          <lego-select-option select-all class="select-all" #selectall>
+            Select All ({{children.length}})
+          </lego-select-option>
+          <div class="selected-options" #selected>
+          </div>
+          <div class="unselected-options" #unselected>
+            <ng-container *ngTemplateOutlet="content"></ng-container>
+          </div>
+        </ng-container>
+
+        <div class="empty-message" *ngIf="!options.length">
+          {{emptyText}}
+        </div>
+      </div>
+    </lego-dropdown>
+  </div>
+  <lego-error *ngIf="showError" [messages]="errors"></lego-error>
+</div>
+
+<ng-template #content><ng-content select="lego-select-option"></ng-content></ng-template>

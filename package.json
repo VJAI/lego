@@ -1,0 +1,79 @@
+{
+  "name": "lego",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --port 61678",
+    "sprites": "svg-sprite --config sprite-config.json packages/core/assets/icons/*.svg",
+    "doc": "typedoc --exclude **/*.spec.ts --out demo/api_docs packages",
+    "test": "ng test --watch=false --code-coverage",
+    "build": "ng lint lego && ng build lego --prod && gulp lib-package",
+    "build-demo": "ng lint demo && ng build demo --prod && npm run doc && gulp demo-package && gulp demo-postinstall",
+    "update-lib-version": "gulp lib-update-version",
+    "update-demo-version": "gulp demo-update-version"
+  },
+  "keywords": [],
+  "author": "Vijaya Anand <vanand@apttus.com>",
+  "dependencies": {
+    "@angular/animations": "^7.2.11",
+    "@angular/cdk": "^7.2.1",
+    "@angular/common": "^8.0.0-beta.0",
+    "@angular/compiler": "^8.0.0-beta.0",
+    "@angular/core": "^8.0.0-beta.0",
+    "@angular/forms": "^8.0.0-beta.0",
+    "@angular/platform-browser": "^8.0.0-beta.0",
+    "@angular/platform-browser-dynamic": "^8.0.0-beta.0",
+    "@angular/router": "^8.0.0-beta.0",
+    "angular-bone": "^1.0.5",
+    "codelyzer": "^4.4.4",
+    "core-js": "^2.5.4",
+    "medium-editor": "^5.23.3",
+    "rxjs": "^6.3.3",
+    "tslint": "^5.11.0",
+    "zone.js": "~0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.12.0-rc.0",
+    "@angular-devkit/build-ng-packagr": "~0.12.0-rc.0",
+    "@angular/cli": "~7.3.0-beta.0",
+    "@angular/compiler-cli": "^8.0.0-beta.0",
+    "@types/jasmine": "~2.8.6",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.1",
+    "husky": "^1.1.4",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~1.7.1",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.0",
+    "karma-jasmine": "~1.1.1",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "ng-packagr": "^3.0.0",
+    "node-sass": "^4.9.3",
+    "node-static": "^0.7.11",
+    "replace": "^1.0.0",
+    "sass-lint": "^1.12.1",
+    "svg-sprite": "^1.5.0",
+    "ts-node": "~5.0.1",
+    "tsickle": ">=0.29.0",
+    "tslib": "^1.9.0",
+    "typedoc": "^0.12.0",
+    "typescript": "~3.2.4",
+    "webpack": "^4.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/apttusdev/ux-design-system"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "ng lint"
+    }
+  }
+}
