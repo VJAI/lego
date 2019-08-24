@@ -1,6 +1,0 @@
-<button type="{{type}}" [ngClass]="buttonCssClasses" [disabled]="disabled">
-  <ng-container *ngIf="label">{{label}}</ng-container>
-  <ng-container *ngIf="!label">
-    <ng-content></ng-content>
-  </ng-container>
-</button>

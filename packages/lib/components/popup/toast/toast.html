@@ -1,9 +1,0 @@
-<div [class]="toastCssClasses"
-     [@fadeAnimation]="{value: animationState, params: { showDelay: showDelay, hideDelay: hideDelay }}"
-     (@fadeAnimation.done)="onFadeFinished($event)">
-  <lego-icon icon="{{toastIcon}}" class="lego-toast-icon"></lego-icon>
-  <div class="lego-toast-content">
-    {{message}}
-  </div>
-  <lego-icon tabindex="0" icon="Cross" (click)="close()" class="lego-toast-close-icon" #closeIcon></lego-icon>
-</div>

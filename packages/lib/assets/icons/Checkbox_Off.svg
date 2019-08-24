@@ -1,4 +1,0 @@
-<svg fill="#000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-  <path transform="translate(3 3)" d="M1,1 L1,17 L17,17 L17,1 L1,1 Z M1,0 L17,0 C17.5522847,0 18,0.44771525 18,1 L18,17 C18,17.5522847 17.5522847,18 17,18 L1,18 C0.44771525,18 0,17.5522847 0,17 L0,1 C0,0.44771525 0.44771525,0 1,0 Z"/>
-  <rect width="16" height="16" fill="#FFF" transform="translate(4 4)"></rect>
-</svg>

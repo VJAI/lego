@@ -3,87 +3,60 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lego": {
-      "root": "packages/lib",
-      "sourceRoot": "packages/lib",
-      "projectType": "library",
-      "prefix": "leg",
+    "demo": {
+      "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         }
       },
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "packages/lib/tsconfig.lib.json",
-            "project": "packages/lib/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "packages/lib/ng-package.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "packages/lib/test.ts",
-            "tsConfig": "packages/lib/tsconfig.spec.json",
-            "karmaConfig": "packages/lib/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "packages/lib/tsconfig.lib.json",
-              "packages/lib/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "demo": {
-      "root": "",
-      "sourceRoot": "demo",
-      "projectType": "application",
+      "root": "projects/demo",
+      "sourceRoot": "projects/demo/src",
       "prefix": "demo",
-      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/demo",
-            "index": "demo/index.html",
-            "main": "demo/main.ts",
-            "polyfills": "demo/polyfills.ts",
-            "tsConfig": "demo/tsconfig.app.json",
+            "index": "projects/demo/src/index.html",
+            "main": "projects/demo/src/main.ts",
+            "polyfills": "projects/demo/src/polyfills.ts",
+            "tsConfig": "projects/demo/tsconfig.app.json",
+            "aot": false,
             "assets": [
-              "demo/favicon.ico",
-              "demo/assets"
+              "projects/demo/src/favicon.ico",
+              "projects/demo/src/assets"
             ],
             "styles": [
-              "demo/styles.scss"
+              "projects/demo/src/styles.scss"
             ],
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "./packages/lib/scss"
-                //"./dist/l.e.g.o/scss"
-              ]
-            },
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "demo/environment.ts",
-                  "with": "demo/environment.prod.ts"
+                  "replace": "projects/demo/src/environments/environment.ts",
+                  "with": "projects/demo/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -94,7 +67,19 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
@@ -114,30 +99,36 @@
           "options": {
             "browserTarget": "demo:build"
           }
+        }
+      }
+    },
+    "lib": {
+      "projectType": "library",
+      "root": "projects/lib",
+      "sourceRoot": "projects/lib/src",
+      "prefix": "lego",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib/tsconfig.lib.json",
+            "project": "projects/lib/ng-package.json"
+          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "demo/test.ts",
-            "polyfills": "demo/polyfills.ts",
-            "tsConfig": "demo/tsconfig.spec.json",
-            "karmaConfig": "demo/karma.conf.js",
-            "styles": [
-              "demo/styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-              "demo/favicon.ico",
-              "demo/assets"
-            ]
+            "main": "projects/lib/src/test.ts",
+            "tsConfig": "projects/lib/tsconfig.spec.json",
+            "karmaConfig": "projects/lib/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "demo/tsconfig.app.json",
-              "demo/tsconfig.spec.json"
+              "projects/lib/tsconfig.lib.json",
+              "projects/lib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -145,7 +136,6 @@
           }
         }
       }
-    }
-  },
+    }},
   "defaultProject": "demo"
 }
