@@ -1,0 +1,190 @@
+$lego-assets-path:              './assets/' !default;
+
+/**
+  Spacing.
+ */
+$spacers: (
+  sm: .5rem,
+  md: 1rem,
+  lg: 1.5rem,
+  xl: 2rem
+) !default;
+
+/**
+  Colors.
+ */
+$primary:                       #ffe000 !default;
+$secondary:                     #2f3e5b !default;
+$tertiary:                      #62a70f !default;
+
+$text-gray:                     #333333 !default;
+$border-gray:                   #dedede !default;
+$mid-gray:                      #666666 !default;
+$light-gray:                    #999999 !default;
+$dim-gray:                      #efefef !default;
+$nav-gray:                      #f4f7fa !default;
+$disable-bg:                    #f1f1f1 !default;
+$disable-text:                  #93a1aa !default;
+$bg-gray:                       #f8f8f8 !default;
+$underline-gray:                #8792a3 !default;
+$highlight-color:               #f1f7ea !default;
+
+$white:                         #ffffff !default;
+$black:                         #000000 !default;
+
+$body-text-color:               $text-gray !default;
+
+$error:                         #d22233 !default;
+$success:                       #62a70f !default;
+$warning:                       #f2a515 !default;
+
+/**
+  Fonts.
+ */
+$font-family-sans-serif:        Roboto, sans-serif !default;
+$font-family-monospace:         Consolas, "Courier New", monospace !default;
+$font-family-base:              $font-family-sans-serif !default;
+
+$font-size-base:                0.875rem !default;
+$line-height-base:              1.3125rem !default;
+$font-weight-normal:            400 !default;
+$font-weight-medium:            500 !default;
+$font-weight-bold:              700 !default;
+$font-weight-base:              $font-weight-normal !default;
+
+$headings-font-family:          inherit !default;
+$h1-font-size:                  1.5rem !default;
+$h2-font-size:                  1.25rem !default;
+$h3-font-size:                  1.25rem !default;
+$h4-font-size:                  1rem !default;
+
+$small-font-size:               0.75rem !default;
+$extrasmall-font-size:          0.625rem !default;
+
+$caps-letter-spacing:           0.75px !default;
+
+/**
+  Links.
+ */
+$link-normal-color:             $mid-gray !default;
+$link-hover-color:              $text-gray !default;
+$link-down-color:               $text-gray !default;
+
+/**
+  Borders & Shadows.
+ */
+$border-width:                  1px !default;
+$border-color:                  $border-gray !default;
+$box-shadow:                    0 1px 2px 0 rgba(0, 0, 0, 0.15) !default;
+$box-shadow-hover:              0 1px 8px 0 rgba(0, 0, 0, 0.24) !default;
+$box-shadow-dropdown:           (0 1px 4px 0 rgba(0, 0, 0, .24)) !default;
+$box-shadow-popover:            (0px 1px 4px 0px rgba(0, 0, 0, .24)) !default;
+$box-shadow-popover-dogear:     (0px 0px 4px 0.5px rgba(0, 0, 0, .24)) !default;
+$box-shadow-toast:              (0 1px 4px 0 rgba(0, 0, 0, .24)) !default;
+
+/**
+  Horizontal Rules.
+ */
+$hr-margin-y:                   map-get($spacers, md) !default;
+$hr-border-color:               rgba($black, .1) !default;
+$hr-border-width:               $border-width !default;
+
+/**
+  Buttons
+ */
+$btn-height:                    2.5rem !default;
+$btn-padding-y:                 0 !default;
+$btn-padding-x:                 1rem !default;
+$btn-border-width:              $border-width !default;
+$btn-font-size:                 0.75rem !default;
+$btn-font-weight:               $font-weight-bold !default;
+
+$primary-button-bg:             $primary !default;
+$primary-button-color:          $body-text-color !default;
+$secondary-button-bg:           $secondary !default;
+$secondary-button-color:        $white !default;
+
+/**
+  NavBar.
+ */
+$navbar-height:                 3.125rem !default;
+$navbar-bg:                     $nav-gray !default;
+
+/**
+  Input Fields.
+ */
+$label-height:                  1.375rem !default;
+$label-line-height:             1.25rem !default;
+$label-color:                   $text-gray !default;
+$label-font-size:               0.75rem !default;
+$input-font-size:               $font-size-base !default;
+$input-line-height:             $line-height-base !default;
+$input-color:                   $body-text-color !default;
+$input-border-width:            $border-width !default;
+$form-group-margin-bottom:      0.875rem !default;
+$label-letter-spacing:          0.25px !default;
+$input-min-width:               5.625rem !default;
+$input-placeholder-size:        $font-size-base !default;
+$input-placeholder-color:       $mid-gray !default;
+
+$textarea-margin-y:             0.2rem !default;
+$textarea-padding:              0.5rem !default;
+$textarea-disabled-border:      $border-gray !default;
+$textarea-counter-margin:       1rem !default;
+$counter-letter-spacing:        0.34px !default;
+$counter-text-font-size:        0.75rem !default;
+
+/**
+  Error
+ */
+$err-max-width:                  25rem !default;
+
+/**
+  Tabs
+ */
+$tab-font-size:                 0.875rem !default;
+$tab-padding:                   0.75rem 1.25rem !default;
+
+/**
+  Dropdown
+ */
+$dropdown-radius:               3px !default;
+$dropdown-maxheight:            25rem !default;
+$dropdown-minwidth:             5.625rem !default;
+$dropdown-maxwidth:             30rem !default;
+
+/**
+  Z-index
+ */
+$navbar-index:                  100 !default;
+$dropdown-index:                70 !default;
+
+/**
+  Switch
+ */
+$switch-width:                  2.25rem !default;
+$switch-height:                 0.9375rem !default;
+$switch-transition:             all .1s ease-in-out !default;
+
+/**
+  Card
+ */
+$card-nav-size:                 2.5rem !default;
+
+/**
+  Tooltip
+ */
+$tooltip-max-width:             22.5rem !default;
+
+/**
+  Toast
+ */
+$toast-bg:                      $white !default;
+$toast-error-color:             $error !default;
+$toast-success-color:           $success !default;
+$toast-warning-color:           $warning !default;
+$toast-info-color:              $mid-gray !default;
+
+/**
+  File Upload
+ */

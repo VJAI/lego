@@ -1,0 +1,10 @@
+<button [attr.form]="form"
+        type="{{behavior}}"
+        [ngClass]="buttonCssClasses"
+        [disabled]="disabled"
+        (blur)="onBlur()">
+  <ng-container *ngIf="label">{{label}}</ng-container>
+  <ng-container *ngIf="!label">
+    <ng-content></ng-content>
+  </ng-container>
+</button>
