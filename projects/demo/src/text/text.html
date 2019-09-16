@@ -1,0 +1,232 @@
+<h1>Text Inputs</h1>
+
+<div class="topic-container">
+  <div class="topic-main">
+
+    <h2 id="overview">Overview</h2>
+
+    <p>
+      Lego provides both textboxes and textareas to accept textual inputs from users. These controls can be used both with
+      template and reactive forms. They also supports built-in validations and displays customizable error messages.
+    </p>
+
+    <h2 id="textbox">Textbox</h2>
+
+    <p>
+      You can create a simple textbox by passing the <code>label</code> and <code>placeholder</code> attributes.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-textbox label="User Name" placeholder="Type User Name"></lego-textbox>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-textbox label="User Name" placeholder="Type User Name"&gt;&lt;/lego-textbox&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="password">Password Textbox</h3>
+
+    <p>
+      Using the <code>datatype</code> property you can set the type of the textbox. The below example shows how you
+      can create a password textbox by setting the <code>datatype</code> as "password".
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-textbox label="Password" datatype="password"></lego-textbox>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-textbox label="Password" datatype="password"&gt;&lt;/lego-textbox&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="maxlength">Maxlength</h3>
+
+    <p>
+      The <code>maxlength</code> attribute is allowed to set the maximum characters allowed by the textbox.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-textbox label="User Name" placeholder="Type User Name" maxlength="10"></lego-textbox>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-textbox label="User Name"
+  placeholder="Type User Name"
+  maxlength="10"&gt;
+&lt;/lego-textbox&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="disabled">Disabled Textbox</h3>
+
+    <p>
+      Adding the <code>disabled</code> attribute will disable the textbox.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-textbox label="User Name" placeholder="Type User Name" value="Vijaya Anand" disabled></lego-textbox>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;label="User Name"
+  placeholder="Type User Name"
+  value="Vijaya Anand"
+  disabled&gt;
+&lt;/lego-textbox&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="validation">Validation &amp; Error Messages</h3>
+
+    <p>
+      Textbox component supports built-in validations like required, minlength, pattern etc. You can also pass custom error
+      messages for the validation errors.
+    </p>
+
+    <h4 id="required">Required</h4>
+
+    <p>
+      You can make the textbox as mandatory by adding the <code>required</code> attribute.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-textbox label="User Name"
+                      placeholder="User Name"
+                      required
+                      [(ngModel)]="userName">
+        </lego-textbox>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-textbox label="User Name"
+  placeholder="User Name"
+  required
+  [(ngModel)]="userName"&gt;
+&lt;/lego-textbox&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="textarea">Textarea</h2>
+
+    <h3 id="simple-textarea">Simple Textarea</h3>
+
+    <p>
+      You can create a simple textarea by passing the <code>label</code> and <code>placeholder</code> attributes.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-textarea label="Feedback" placeholder="Please give your feedback"></lego-textarea>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-textarea
+  label="Feedback"
+  placeholder="Please give your feedback"&gt;
+&lt;/lego-textarea&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="textarea-maxlength">Maxlength</h3>
+
+    <p>
+      The maximum characters allowed can be restricted using the <code>maxlength</code> attribute. On passing <code>maxlength</code>
+      the control will display a counter at the right bottom.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-textarea label="Comments" placeholder="Less than 100 chars..." maxlength="100"></lego-textarea>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-textarea
+  label="Comments"
+  placeholder="Less than 100 chars..."
+  maxlength="100"&gt;
+&lt;/lego-textarea&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="textarea-disabled">Disabled</h3>
+
+    <p>
+      Setting the <code>disabled</code> attribute will disable the textarea.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-textarea disabled label="Comments" placeholder="Less than 100 chars..." maxlength="100"></lego-textarea>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-textarea
+  disabled
+  label="Comments"
+  placeholder="Less than 100 chars..."
+  maxlength="100"&gt;
+&lt;/lego-textarea&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+  </div>
+
+  <div class="topic-sidenav">
+    <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/text']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/text']" fragment="textbox">Textbox</a>
+        <ul>
+          <li>
+            <a [routerLink]="['/demo/text']" fragment="password">Password Textbox</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/text']" fragment="maxlength">Maxlength</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/text']" fragment="disabled">Disabled Textbox</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/text']" fragment="validation">Validation &amp; Error Messages</a>
+            <ul>
+              <li>
+                <a [routerLink]="['/demo/text']" fragment="required">Required</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/text']" fragment="textarea">Textarea</a>
+        <ul>
+          <li>
+            <a [routerLink]="['/demo/text']" fragment="simple-textarea">Simple Textarea</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/text']" fragment="textarea-maxlength">Maxlength</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/text']" fragment="textarea-disabled">Disabled</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+

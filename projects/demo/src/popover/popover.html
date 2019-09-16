@@ -1,0 +1,409 @@
+<h1>Popover</h1>
+
+<div class="topic-container">
+  <div class="topic-main">
+
+    <h2 id="overview">Overview</h2>
+
+    <p>
+      Popovers helps to display additional information on hovering over the target. It auto position itself based on the available
+      real-estate.
+    </p>
+
+    <h2 id="example">Example</h2>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <a #trigger>Show User Info</a>
+        <lego-popover [trigger]="trigger">
+          <lego-popover-title>
+            Vijaya Anand
+          </lego-popover-title>
+          <lego-popover-body>
+            <p style="margin-top: 1rem">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </lego-popover-body>
+        </lego-popover>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;a #trigger&gt;Show User Info&lt;/a&gt;
+&lt;lego-popover [trigger]="trigger"&gt;
+  &lt;lego-popover-title&gt;
+    Vijaya Anand
+  &lt;/lego-popover-title&gt;
+  &lt;lego-popover-body&gt;
+    &lt;p style="margin-top: 1rem"&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    &lt;/p&gt;
+  &lt;/lego-popover-body&gt;
+&lt;/lego-popover&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="orientations">Orientations</h2>
+
+    <p>
+      You can pass preferred orientations through the <code>preferred-orientations</code> property.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <div>
+          <a #trigger1>left</a>
+          <lego-popover [trigger]="trigger1" [preferred-orientations]="['left']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger2>left-alt</a>
+          <lego-popover [trigger]="trigger2" [preferred-orientations]="['left-alt']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger3>left-middle</a>
+          <lego-popover [trigger]="trigger3" [preferred-orientations]="['left-middle']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger4>right</a>
+          <lego-popover [trigger]="trigger4" [preferred-orientations]="['right']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger5>right-alt</a>
+          <lego-popover [trigger]="trigger5" [preferred-orientations]="['right-alt']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger6>right-middle</a>
+          <lego-popover [trigger]="trigger6" [preferred-orientations]="['right-middle']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger7>top-left</a>
+          <lego-popover [trigger]="trigger7" [preferred-orientations]="['top-left']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger8>top-middle</a>
+          <lego-popover [trigger]="trigger8" [preferred-orientations]="['top-middle']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger9>top-right</a>
+          <lego-popover [trigger]="trigger9" [preferred-orientations]="['top-right']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger10>bottom-left</a>
+          <lego-popover [trigger]="trigger10" [preferred-orientations]="['bottom-left']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger11>bottom-middle</a>
+          <lego-popover [trigger]="trigger11" [preferred-orientations]="['bottom-middle']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+
+        <div>
+          <a #trigger12>bottom-right</a>
+          <lego-popover [trigger]="trigger12" [preferred-orientations]="['bottom-right']">
+            <lego-popover-title>
+              Vijaya Anand
+            </lego-popover-title>
+            <lego-popover-body>
+              <p style="margin-top: 1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </lego-popover-body>
+          </lego-popover>
+        </div>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;div&gt;
+  &lt;a #trigger1&gt;left&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger1" [preferred-orientations]="['left']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger2&gt;left-alt&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger2" [preferred-orientations]="['left-alt']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger3&gt;left-middle&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger3" [preferred-orientations]="['left-middle']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger4&gt;right&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger4" [preferred-orientations]="['right']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger5&gt;right-alt&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger5" [preferred-orientations]="['right-alt']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger6&gt;right-middle&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger6" [preferred-orientations]="['right-middle']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger7&gt;top-left&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger7" [preferred-orientations]="['top-left']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger8&gt;top-middle&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger8" [preferred-orientations]="['top-middle']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger9&gt;top-right&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger9" [preferred-orientations]="['top-right']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger10&gt;bottom-left&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger10" [preferred-orientations]="['bottom-left']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger11&gt;bottom-middle&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger11" [preferred-orientations]="['bottom-middle']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;a #trigger12&gt;bottom-right&lt;/a&gt;
+  &lt;lego-popover [trigger]="trigger12" [preferred-orientations]="['bottom-right']"&gt;
+    &lt;lego-popover-title&gt;
+      Vijaya Anand
+    &lt;/lego-popover-title&gt;
+    &lt;lego-popover-body&gt;
+      &lt;p style="margin-top: 1rem"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      &lt;/p&gt;
+    &lt;/lego-popover-body&gt;
+  &lt;/lego-popover&gt;
+&lt;/div&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+  </div>
+
+  <div class="topic-sidenav">
+    <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/popover']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/popover']" fragment="example">Example</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/popover']" fragment="orientations">Orientations</a>
+      </li>
+    </ul>
+  </div>
+</div>

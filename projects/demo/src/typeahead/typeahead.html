@@ -1,0 +1,278 @@
+<h1>Typeahead</h1>
+
+<div class="topic-container">
+  <div class="topic-main">
+
+    <h2 id="overview">Overview</h2>
+
+    <p>
+      Typeaheads helps you to select records by searching. They comes in both single-select and multi-select modes.
+    </p>
+
+    <h2 id="example">Example</h2>
+
+    <p>
+      The below example shows a simple typeahead with an array data source.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-typeahead label="Favourite Cricket Team"
+                        placeholder="Select Your Favourite Team"
+                        [source]="countries">
+        </lego-typeahead>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-typeahead label="Favourite Cricket Team" placeholder="Select Your Favourite Team" [source]="countries"&gt;
+&lt;/lego-typeahead&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="data-binding">Data Binding</h2>
+
+    <p>
+      You can use bind data using <code>ngModel</code> or through reactive directives.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-typeahead label="Favourite Cricket Team"
+                        placeholder="Select Your Favourite Team"
+                        [source]="countries"
+                        [(ngModel)]="selectedTeam">
+        </lego-typeahead>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-typeahead label="Favourite Cricket Team" placeholder="Select Your Favourite Team" [source]="countries" [(ngModel)]="selectedTeam"&gt;
+&lt;/lego-typeahead&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="disabled">Disabled</h2>
+
+    <p>
+      You can disable by just passing the <code>disabled</code> attribute.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-typeahead label="Favourite Cricket Team" placeholder="Select Your Favourite Team" [source]="countries" disabled>
+        </lego-typeahead>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-typeahead label="Favourite Cricket Team" placeholder="Select Your Favourite Team" [source]="countries" disabled&gt;
+&lt;/lego-typeahead&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="multiselect">Multi-select</h2>
+
+    <p>
+      You can turn typeahead into multi-selectable by passing <code>multiple</code> attribute.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-typeahead label="Favourite Cricket Team"
+                        placeholder="Type to add new team"
+                        selected-placeholder-text="$count$ teams selected"
+                        [source]="countries"
+                        required
+                        [(ngModel)]="selectedTeams"
+                        multiple>
+        </lego-typeahead>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-typeahead label="Favourite Cricket Team"
+  placeholder="Type to add new team"
+  [source]="countries"
+  required
+  [(ngModel)]="selectedTeams"
+  multiple&gt;
+&lt;/lego-typeahead&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="validation">Validation</h2>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-typeahead label="Favourite Cricket Team"
+                        placeholder="Type to add new team"
+                        selected-placeholder-text="$count$ teams selected"
+                        [source]="countries"
+                        required
+                        [(ngModel)]="selectedTeams"
+                        [min-items]="2"
+                        multiple>
+        </lego-typeahead>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-typeahead label="Favourite Cricket Team"
+  placeholder="Type to add new team"
+  [source]="countries"
+  required
+  [(ngModel)]="selectedTeams"
+  [min-items]="2"
+  multiple&gt;
+&lt;/lego-typeahead&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="async">Async Data Source</h2>
+
+    <p>
+      You can also pass an observable as data source to the typeahead.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-typeahead label="Tags"
+                        placeholder="Type to atleast 3 chars to add tag"
+                        [source]="tags$"
+                        id-string="id"
+                        value-string="name">
+        </lego-typeahead>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-typeahead label="Tags"
+  placeholder="Type to atleast 3 chars to add tag"
+  [source]="tags$"
+  id-string="id"
+  value-string="name"&gt;
+&lt;/lego-typeahead&gt;</code>
+</pre>
+      </demo-tab>
+      <demo-tab heading="TypeScript">
+<pre>
+<code>public tags = [
+  &#123; id: '1', name: 'ASP.NET', desc: 'Framework for building web apps using .NET framework.' &#125;,
+  &#123; id: '2', name: 'JavaScript', desc: 'Client-side language used in browser for interacting with DOM.' &#125;,
+  &#123; id: '3', name: 'CSS', desc: 'Language for writing styles.' &#125;,
+  &#123; id: '4', name: 'Angular', desc: 'UI Framework for developing Single Page Apps.' &#125;,
+  &#123; id: '5', name: 'React', desc: 'Library for developing UI components.' &#125;,
+  &#123; id: '6', name: '.NET', desc: 'Microsof Framework for developing apps and services.' &#125;,
+  &#123; id: '7', name: 'Python', desc: 'An amazing programming language.' &#125;,
+  &#123; id: '8', name: 'NodeJS', desc: 'Framework that helps to run JS in server.' &#125;,
+  &#123; id: '9', name: 'Basic', desc: 'Classic programming language.' &#125;,
+  &#123; id: '10', name: 'SQL', desc: 'Database query language.' &#125;
+];
+
+public tags$ = &#123;
+
+  query: (search: string) => &#123;
+    const result = search ? this.tags.filter(tag => tag.name.search(new RegExp(search, 'i')) > -1) : this.tags;
+    return of(&#123;
+                result: result
+              &#125;).pipe(delay(3000));
+  &#125;,
+
+  byId: (id: string) => &#123;
+    const result = this.tags.find(tag => tag.id === id);
+    return of(result).pipe(delay(3000));
+  &#125;,
+
+  byIds: (ids: Array&lt;string&gt;) => &#123;
+    const result = this.tags.filter(tag => ids.indexOf(tag.id) > -1);
+    return of(result).pipe(delay(3000));
+  &#125;
+&#125;;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="custom-templates">Custom Templates</h2>
+
+    <p>
+      You can customize the way the options and selected options are displayed through templates as shown in the
+      below example.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-typeahead label="Favourite Super Heroes"
+                        placeholder="Type to add new hero"
+                        [source]="superheroes"
+                        [selected]="['1','2']"
+                        required
+                        container-css-classes="custom-typeahead-option"
+                        multiple
+                        #typeahead>
+          <ng-template #optionTemplate let-option="option">
+            <demo-custom-typeahead-option [option]="option"></demo-custom-typeahead-option>
+          </ng-template>
+          <ng-template #selectedOptions>
+            <lego-chips delete>
+              <lego-chip *ngFor="let selectedItem of typeahead.selectedItems"
+                         [key]="selectedItem.id"
+                         (delete-click)="typeahead.removeSelectedOption(selectedItem)">{{selectedItem.name}}</lego-chip>
+            </lego-chips>
+          </ng-template>
+        </lego-typeahead>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-typeahead label="Favourite Super Heroes"
+                placeholder="Type to add new hero"
+                [source]="superheroes"
+                [selected]="['1','2']"
+                required
+                container-css-classes="custom-typeahead-option"
+                multiple
+                #typeahead&gt;
+  &lt;ng-template #optionTemplate let-option="option"&gt;
+    &lt;demo-custom-typeahead-option [option]="option"&gt;&lt;/demo-custom-typeahead-option&gt;
+  &lt;/ng-template&gt;
+  &lt;ng-template #selectedOptions&gt;
+    &lt;lego-chips delete&gt;
+      &lt;lego-chip *ngFor="let selectedItem of typeahead.selectedItems"
+                 [key]="selectedItem.id"
+                 (delete-click)="typeahead.removeSelectedOption(selectedItem)"&gt;&#123; &#123;selectedItem.name&#125; &#125;&lt;/lego-chip&gt;
+    &lt;/lego-chips&gt;
+  &lt;/ng-template&gt;
+&lt;/lego-typeahead&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+  </div>
+
+  <div class="topic-sidenav">
+    <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/typeahead']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/typeahead']" fragment="example">Example</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/typeahead']" fragment="data-binding">Data Binding</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/typeahead']" fragment="disabled">Disabled</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/typeahead']" fragment="multiselect">Multiselect</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/typeahead']" fragment="validation">Validation</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/typeahead']" fragment="async">Async Data Source</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/typeahead']" fragment="custom-templates">Custom Templates</a>
+      </li>
+    </ul>
+  </div>
+</div>

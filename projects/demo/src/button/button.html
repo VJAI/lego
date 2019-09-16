@@ -1,0 +1,91 @@
+<h1>Buttons</h1>
+
+<div class="topic-container">
+  <div class="topic-main">
+
+    <h2 id="overview">Overview</h2>
+
+    <p>
+      Button is one of the primary component required for any decent application. Lego supports three types of buttons.
+    </p>
+
+    <ul>
+      <li>Primary</li>
+      <li>Secondary</li>
+      <li>Tertiary</li>
+    </ul>
+
+    <h2 id="types">Button Types</h2>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-button label="Primary Button"></lego-button>
+        &nbsp;
+        <lego-button label="Secondary Button" type="secondary"></lego-button>
+        &nbsp;
+        <lego-button label="Tertiary Button" type="tertiary"></lego-button>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-button label="Primary Button"&gt;&lt;/lego-button&gt;
+&lt;lego-button label="Secondary Button" type="secondary">&lt;/lego-button&gt;
+&lt;lego-button label="Tertiary Button" type="tertiary">&lt;/lego-button&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="disabled">Disabled Button</h2>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-button label="Disabled Button" disabled></lego-button>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-button label="Disabled Button" disabled&gt;&lt;/lego-button&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="click">Listening to "click" event</h2>
+
+    <p>
+      You can wire-up custom handler to button "click" event using the <code>click</code> binding.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-button label="Verify Account" type="secondary" (click)="verifyAccount()"></lego-button>
+        <div class="demo-message" #message1></div>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-button
+  label="Verify Account"
+  type="secondary"
+  (click)="verifyAccount()"&gt;
+&lt;/lego-button&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+  </div>
+
+  <div class="topic-sidenav">
+    <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/button']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/button']" fragment="types">Button Types</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/button']" fragment="disabled">Disabled Button</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/button']" fragment="click">Listening to "click" event</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+

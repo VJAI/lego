@@ -1,0 +1,36 @@
+@import 'variables';
+@import '../demo-variables';
+
+:host {
+  padding: 0.625rem 0;
+  background-color: $white;
+  display: block;
+  border-radius: 2px;
+  border: solid 1px $mid-gray;
+  margin-bottom: 1rem;
+
+  .tabs-head {
+    outline: none;
+    border: none;
+    transition: 0.2s;
+    padding: 0 0 2.5rem 0.1rem;
+    width: 100%;
+    color: $mid-gray;
+
+    li {
+      float: left;
+      list-style-type: none;
+      padding: 0.5rem 2rem;
+      opacity: 0.5;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    li.active {
+      border-bottom: 2px solid $secondary;
+      opacity: 1;
+    }
+  }
+}
+
+

@@ -1,0 +1,42 @@
+@import 'variables';
+
+nav {
+  section {
+
+    h5 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 0.75rem 1.5rem;
+      margin: 25px 0 0 0;
+      font-size: 0.75rem;
+      color: $border-gray;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-size: 0.85rem;
+        border-bottom: solid 1px #6d778c;
+
+        a {
+          text-decoration: none;
+          padding: 0.75rem 1.5rem;
+          display: block;
+          width: 100%;
+          border-left: solid 3px transparent;
+          border-bottom: none;
+          color: $white;
+
+          &:hover, &.active {
+            border-left: solid 3px $primary;
+          }
+        }
+      }
+    }
+  }
+}

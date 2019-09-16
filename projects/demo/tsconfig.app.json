@@ -1,18 +1,19 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../out-tsc/app",
-    "types": []
+    "outDir": "../out-tsc/app",
+    "types": [],
+    "paths": {
+      "lego": [
+        "packages/lib"
+      ],
+      "lego/*": [
+        "packages/lib/*"
+      ]
+    }
   },
-  "files": [
-    "src/main.ts",
-    "src/polyfills.ts"
-  ],
-  "include": [
-    "src/**/*.ts"
-  ],
   "exclude": [
     "src/test.ts",
-    "src/**/*.spec.ts"
+    "**/*.spec.ts"
   ]
 }
