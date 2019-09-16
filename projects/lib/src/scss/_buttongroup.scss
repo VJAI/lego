@@ -1,0 +1,79 @@
+lego-button-group {
+
+  .input-wrapper .input .label-text {
+    margin-bottom: 1rem;
+  }
+
+  .label {
+    height: 2.25rem;
+    font-size: $font-size-base;
+    letter-spacing: 0.025rem;
+    padding: 0.5rem;
+  }
+
+  lego-button-group-option {
+    display: inline-block;
+
+    input[type="radio"] {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      background-color: $white;
+
+      &:not([disabled]) ~ label {
+        text-align: center;
+        border: $border-width solid $border-color;
+        border-right-width: 0;
+        color: $text-gray;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &:checked {
+        & + label {
+          background-color: $secondary;
+          border-color: $secondary;
+          color: $white;
+        }
+      }
+
+      &:disabled {
+        & + label {
+          border: $border-width solid $border-color;
+          border-right-width: 0;
+          background-color: $disable-bg;
+          color: $disable-text;
+        }
+      }
+    }
+
+    &:first-of-type {
+      label {
+        border-top-left-radius: 0.125rem;
+        border-bottom-left-radius: 0.125rem;
+      }
+    }
+
+    &:last-child {
+      input[type="radio"] {
+        &:disabled + label {
+          border-right: $border-width solid $border-gray;
+          border-top-right-radius: 0.125rem;
+          border-bottom-right-radius: 0.125rem;
+        }
+
+        & + label {
+          border-right: $border-width solid $border-gray;
+          border-top-right-radius: 0.125rem;
+          border-bottom-right-radius: 0.125rem;
+        }
+
+        &:checked + label {
+          border-color: $secondary;
+        }
+      }
+    }
+  }
+}

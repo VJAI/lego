@@ -1,0 +1,21 @@
+lego-spinner {
+  color: $mid-gray;
+  width: auto;
+  height: auto;
+
+  svg {
+    animation: rotate 500ms linear infinite;
+    width: inherit;
+    height: inherit;
+
+    path {
+      fill: currentColor;
+    }
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

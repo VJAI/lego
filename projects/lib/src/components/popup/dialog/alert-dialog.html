@@ -1,0 +1,13 @@
+<lego-dialog
+  [title-icon]="titleIcon"
+  [overlay-ref]="overlayRef">
+  <lego-dialog-header>
+    {{title}}
+  </lego-dialog-header>
+  <lego-dialog-body>
+    {{message}}
+  </lego-dialog-body>
+  <lego-dialog-footer>
+    <lego-button type="secondary" (click)="close()">Close</lego-button>
+  </lego-dialog-footer>
+</lego-dialog>

@@ -1,0 +1,29 @@
+lego-tooltip {
+  background-color: $nav-gray;
+  border: solid 1px $light-gray;
+  opacity: 0;
+  box-shadow: $box-shadow;
+  transition: opacity 250ms;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  padding: 0.375rem 1rem;
+  max-width: $tooltip-max-width;
+  margin: 0.25rem;
+
+  &.display {
+    opacity: 1;
+  }
+
+  &.dark {
+    background-color: #212121;
+    border: solid 1px $white;
+    color: $white;
+  }
+}
+
+.lego-tooltip-host {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

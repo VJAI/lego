@@ -1,0 +1,21 @@
+<div class="input-wrapper">
+  <div class="input" [class.required]="required">
+    <label *ngIf="label" class="label-text" for="{{id}}-input">{{label}}</label>
+    <textarea #textarea
+              [rows]="rows"
+              id="{{id}}-input"
+              [attr.maxLength]="maxLength ? maxLength : null"
+              [disabled]="disabled"
+              placeholder="{{placeholder}}"
+              [attr.aria-label]="label"
+              [required]="required"
+              [(ngModel)]="data"
+              [ngModelOptions]="{standalone: true}"
+              (change)="fireChangeEvent($event)"
+              (blur)="onTouched()"
+              (input)="onInput()"
+              [class.error]="showError"></textarea>
+    <div *ngIf="maxLength && data" class="counter">{{data.length}}/{{maxLength}}</div>
+  </div>
+  <lego-error *ngIf="showError" [messages]="errors"></lego-error>
+</div>

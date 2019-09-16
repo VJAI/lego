@@ -1,0 +1,18 @@
+<lego-dialog
+  [title-icon]="titleIcon"
+  [overlay-ref]="overlayRef">
+  <lego-dialog-header>
+    {{title}}
+  </lego-dialog-header>
+  <lego-dialog-body>
+    {{message}}
+  </lego-dialog-body>
+  <lego-dialog-footer>
+    <lego-actionbar>
+      <lego-actionbar-right>
+        <lego-button (click)="handleYesClick()">{{yesButtonName}}</lego-button>
+        <lego-button type="secondary" (click)="close()">{{noButtonName}}</lego-button>
+      </lego-actionbar-right>
+    </lego-actionbar>
+  </lego-dialog-footer>
+</lego-dialog>

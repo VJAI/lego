@@ -1,0 +1,102 @@
+lego-editor {
+  display: block;
+
+  .tox-tinymce {
+    border: $input-border-width solid $border-gray;
+
+    .tox-edit-area {
+      border-top: $input-border-width solid $border-gray;
+    }
+  }
+
+  &.inline {
+    .toolbar-container {
+      .tox-tinymce {
+        border-bottom: none;
+        display: block !important;
+      }
+    }
+
+    .editor-container {
+      padding: $textarea-padding;
+      border: $input-border-width solid $border-gray;
+
+      .mce-content-body {
+        min-height: var(--editor-minheight, auto);
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .plugin-placeholder:before {
+        display: none;
+        position: absolute;
+        content: attr(placeholder);
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        color: $mid-gray;
+      }
+
+      .mce-panel.plugin-placeholder:before {
+        margin-left: 8px;
+      }
+
+      .plugin-placeholder iframe {
+        z-index: 2;
+      }
+
+      .plugin-placeholder.empty:before {
+        display: block;
+      }
+    }
+  }
+
+  &.disabled {
+    .tox-toolbar {
+      button {
+        color: $light-gray;
+
+        .tox-icon svg {
+          fill: $light-gray;
+        }
+
+        &:hover {
+          background: transparent;
+          color: $light-gray;
+        }
+      }
+    }
+
+    .mce-content-body {
+      color: $disable-text;
+      user-select: none;
+
+      * {
+        color: inherit;
+      }
+    }
+  }
+
+  .error-count-row {
+    display: flex;
+
+    lego-error {
+      flex-grow: 1;
+    }
+
+    .count {
+      margin-left: auto;
+      color: $light-gray;
+      font-size: 0.75rem;
+
+      span:not(last-child) {
+        margin-right: 0.1rem;
+      }
+
+      &.overflow {
+        color: $error;
+      }
+    }
+  }
+}

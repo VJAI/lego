@@ -1,0 +1,9 @@
+<div class="input-wrapper">
+  <div class="input" [class.required]="required" #dropreference *ngIf="label">
+    <label class="label-text">{{label}}</label>
+  </div>
+  <div class="radio-options">
+    <ng-content></ng-content>
+  </div>
+  <lego-error *ngIf="showError" [messages]="errors"></lego-error>
+</div>

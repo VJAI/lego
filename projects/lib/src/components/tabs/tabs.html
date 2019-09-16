@@ -1,0 +1,6 @@
+<ul class="tabs-header" [style.justifyContent]="tabsAlignment">
+  <li [class.active]="i === selectedTabIndex" *ngFor="let tab of tabs; let i = index" (click)="showTab(i)">
+    {{tab.heading}}
+  </li>
+</ul>
+<ng-content></ng-content>

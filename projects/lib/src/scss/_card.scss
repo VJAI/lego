@@ -1,0 +1,72 @@
+lego-card {
+  display: block;
+  box-shadow: $box-shadow;
+  transition: box-shadow .1s ease-in-out;
+  background-color: $white;
+}
+
+lego-card-list {
+  --spacing: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .nav {
+    min-height: $card-nav-size;
+    min-width: $card-nav-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: opacity 250ms;
+    background-color: $white;
+    position: absolute;
+    z-index: 1;
+
+    &.prev {
+      margin-right: 1rem;
+      left: -$card-nav-size / 2;
+    }
+
+    &.next {
+      margin-left: 1rem;
+      right: -$card-nav-size / 2;
+    }
+
+    &[hidden] {
+      opacity: 0;
+    }
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
+
+  .cards-slit {
+    flex-grow: 1;
+    overflow: hidden;
+
+    .cards-mover {
+      min-width: 6000px;
+      padding: 3px;
+      transition: transform 500ms;
+
+      lego-card {
+        display: inline-block;
+        margin-right: var(--spacing);
+      }
+    }
+  }
+
+  &.matrix {
+    display: flex;
+    flex-wrap: wrap;
+
+    lego-card {
+      margin-right: var(--spacing);
+      margin-bottom: var(--spacing);
+    }
+  }
+}

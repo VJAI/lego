@@ -1,0 +1,12 @@
+<div class="container radio-option">
+  <input class="form-control form-radio-control"
+         name="{{parent.name}}"
+         type="radio"
+         value="{{keyOrValue}}"
+         id="{{id}}-radio"
+         [disabled]="parent.disabled || disabled"
+         [checked]="parent.data === keyOrValue"
+         (change)="onChange($event)"
+         (blur)="onTouched()" />
+  <label for="{{id}}-radio"><ng-content></ng-content><ng-container *ngIf="value">{{inputValue}}</ng-container></label>
+</div>

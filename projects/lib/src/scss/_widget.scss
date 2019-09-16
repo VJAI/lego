@@ -1,0 +1,16 @@
+lego-widget {
+  display: block;
+  border: solid 1px $dim-gray;
+
+  .widget-head {
+    h4 {
+      margin: 0;
+      padding: 1rem 0.5rem;
+      background-color: $dim-gray;
+      color: $secondary;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.875rem;
+    }
+  }
+}

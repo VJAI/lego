@@ -1,0 +1,12 @@
+<div class="button-group-option-wrapper">
+  <input name="{{parent.id}}"
+         type="radio"
+         value="{{keyOrValue}}"
+         attr.aria-label="{{value}}"
+         id="{{id}}-button-group"
+         [disabled]="parent.disabled || disabled"
+         [checked]="parent.data == keyOrValue"
+         (change)="onChange($event)"
+         (blur)="onTouched()" />
+  <label for="{{id}}-button-group" class="label">{{value}}</label>
+</div>

@@ -1,0 +1,18 @@
+lego-actionbar {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+
+  lego-actionbar-left, lego-actionbar-right {
+    display: flex;
+    align-items: center;
+
+    > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  lego-actionbar-right {
+    margin-left: auto;
+  }
+}

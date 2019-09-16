@@ -1,0 +1,57 @@
+lego-slider {
+  .slider-container {
+    padding: 0 0.5rem;
+
+    .ng5-slider {
+      .ng5-slider-bar {
+        background: $dim-gray;
+        height: 2px;
+      }
+
+      .ng5-slider-selection {
+        background: $mid-gray;
+      }
+
+      .ng5-slider-pointer {
+        width: 8px;
+        height: 16px;
+        top: auto; /* to remove the default positioning */
+        bottom: 0;
+        background-color: $mid-gray;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .ng5-slider-bubble {
+        bottom: 14px;
+      }
+
+      .ng5-slider-limit {
+        font-weight: bold;
+        color: $mid-gray;
+      }
+
+      .ng5-slider-tick {
+        width: 1px;
+        height: 10px;
+        margin-left: 4px;
+        border-radius: 0;
+        background: $mid-gray;
+        top: -1px;
+
+        &.ng5-slider-selected {
+          background: $mid-gray;
+        }
+
+        .ng5-slider-tick-legend {
+          font-size: 0.75rem;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}

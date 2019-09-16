@@ -1,0 +1,6 @@
+<div class="widget-head" *ngIf="title">
+  <h4>{{title}}</h4>
+</div>
+<div class="widget-body" [style.padding]="bodyPadding">
+  <ng-content></ng-content>
+</div>

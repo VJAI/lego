@@ -1,0 +1,8 @@
+<div class="input-wrapper">
+  <div class="input" [class.required]="required">
+    <label class="label-text" *ngIf="label">{{label}}</label>
+  </div>
+  <ng-content></ng-content>
+  <ng-container #container></ng-container>
+  <lego-error *ngIf="showError" [messages]="errors"></lego-error>
+</div>

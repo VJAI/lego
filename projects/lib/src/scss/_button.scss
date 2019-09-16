@@ -1,0 +1,46 @@
+@import 'variables';
+
+lego-button {
+  display: inline-block;
+}
+
+lego-button button, .button {
+  position: relative;
+  font-family: inherit;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  user-select: none;
+  height: $btn-height;
+  border: none;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  text-transform: uppercase;
+  letter-spacing: $caps-letter-spacing;
+
+  &.primary {
+    background-color: $primary-button-bg;
+    color: $primary-button-color;
+  }
+
+  &.secondary {
+    background-color: $secondary-button-bg;
+    color: $secondary-button-color;
+  }
+
+  &.tertiary {
+    background-color: $white;
+    color: $body-text-color;
+  }
+
+  &:disabled {
+    background-color: $disable-bg;
+    color: $disable-text;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: none;
+}

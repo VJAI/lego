@@ -1,0 +1,114 @@
+lego-typeahead {
+  .input-wrapper {
+    .input {
+      input {
+        &:disabled + .search {
+          color: $disable-text;
+        }
+      }
+
+      .search {
+        position: absolute;
+        color: inherit;
+        right: 0;
+        bottom: 0;
+      }
+
+      lego-spinner {
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .selected-options {
+      .default-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        .selected-option {
+          display: flex;
+          align-items: center;
+          font-size: 0.75rem;
+          background-color: $dim-gray;
+          color: $mid-gray;
+          padding: 0 0.5rem;
+          margin-right: 0.5rem;
+          margin-top: 0.5rem;
+          height: 1.75rem;
+          transition: all 0.25s;
+
+          .delete {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+          }
+
+          &:hover {
+            background-color: $secondary;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  &:not(.disabled) {
+    .search {
+      cursor: pointer;
+    }
+  }
+}
+
+lego-typeahead-options {
+  border-radius: 3px;
+  box-shadow: $box-shadow-dropdown;
+  display: block;
+  overflow: auto;
+  background-color: $white;
+  width: 100%;
+
+  lego-typeahead-option {
+    .option-container {
+      padding: 0 0.875rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      color: $body-text-color;
+      background-color: $white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    &.selected {
+      .option-container {
+        color: $secondary;
+        background-color: $bg-gray;;
+        font-weight: $font-weight-medium;
+
+        &:hover, &.active {
+          background-color: $dim-gray;
+
+          @media screen and (-ms-high-contrast: active) {
+            background-color: $dim-gray;
+          }
+        }
+      }
+    }
+
+    &:hover, &.active {
+      .option-container {
+        outline: none;
+        background-color: $dim-gray;
+
+        @media screen and (-ms-high-contrast: active) {
+          background-color: $dim-gray;
+        }
+      }
+    }
+  }
+}
