@@ -1,6 +1,6 @@
-$lego-assets-path: '../packages/lib/assets/' !default;
+$lego-assets-path: '../../lib/src/assets/' !default;
 
-@import '../packages/lib/index';
+@import '../../lib/src/scss/lego';
 
 .demo-container {
   display: grid;

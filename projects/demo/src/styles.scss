@@ -1,7 +1,6 @@
+$lego-assets-path: '../projects/core/assets/' !default;
 
-$lego-assets-path: '../packages/core/assets/' !default;
-
-@import '../packages/lib/scss/lego';
+@import '../../lib/src/scss/lego';
 
 body {
   padding: 0;

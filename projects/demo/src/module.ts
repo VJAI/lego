@@ -5,8 +5,6 @@ import { ButtonGroupDemoComponent } from './button-group/button-group-demo.compo
 import { ChipsDemoComponent } from './chips/chips-demo.component';
 import { CustomDialogDemoComponent } from './dialog/custom-dialog-demo.component';
 import { DialogDemoComponent } from './dialog/dialog-demo.component';
-import { EditorDemoComponent } from './editor/editor-demo.component';
-import { LoaderDemoComponent } from './loader/loader-demo.component';
 import { PopoverDemoComponent } from './popover/popover-demo.component';
 import { DemoRoutingModule } from './routing';
 import { LegoModule } from 'lego';
@@ -16,7 +14,6 @@ import { DemoNavbarComponent } from './demo-navbar.component';
 import { IntroComponent } from './intro/intro-component';
 import { ButtonDemoComponent } from './button/button-demo.component';
 import { SelectDemoComponent } from './select/select-demo.component';
-import { SliderDemoComponent } from './slider/slider-demo.component';
 import { SpinnerDemoComponent } from './spinner/spinner-demo.component';
 import { ToastDemoComponent } from './toast/toast-demo.component';
 import { TooltipDemoComponent } from './tooltip/tooltip-demo.component';
@@ -75,10 +72,7 @@ import { WidgetDemoComponent } from './widget/widget-demo.component';
     ToastDemoComponent,
     DialogDemoComponent,
     CustomDialogDemoComponent,
-    EditorDemoComponent,
     ButtonGroupDemoComponent,
-    SliderDemoComponent,
-    LoaderDemoComponent,
     WidgetDemoComponent
   ],
   providers: [],
@@ -105,10 +99,7 @@ import { WidgetDemoComponent } from './widget/widget-demo.component';
     ToastDemoComponent,
     DialogDemoComponent,
     CustomDialogDemoComponent,
-    EditorDemoComponent,
     ButtonGroupDemoComponent,
-    SliderDemoComponent,
-    LoaderDemoComponent,
     WidgetDemoComponent
   ]
 })

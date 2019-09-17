@@ -49,6 +49,12 @@
             "styles": [
               "projects/demo/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./projects/lib/src/scss"
+                //"./dist/l.e.g.o/scss"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

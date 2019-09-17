@@ -5,13 +5,10 @@ import { ButtonGroupDemoComponent } from './button-group/button-group-demo.compo
 import { ChipsDemoComponent } from './chips/chips-demo.component';
 import { ColorDemoComponent } from './color/color-demo.component';
 import { DialogDemoComponent } from './dialog/dialog-demo.component';
-import { EditorDemoComponent } from './editor/editor-demo.component';
 import { IntroComponent } from './intro/intro-component';
 import { ButtonDemoComponent } from './button/button-demo.component';
-import { LoaderDemoComponent } from './loader/loader-demo.component';
 import { PopoverDemoComponent } from './popover/popover-demo.component';
 import { SelectDemoComponent } from './select/select-demo.component';
-import { SliderDemoComponent } from './slider/slider-demo.component';
 import { SpinnerDemoComponent } from './spinner/spinner-demo.component';
 import { SwitchDemoComponent } from './switch/switch-demo.component';
 import { ToastDemoComponent } from './toast/toast-demo.component';
@@ -83,17 +80,8 @@ const topics = [{
   name: 'dialog',
   component: DialogDemoComponent
 }, {
-  name: 'editor',
-  component: EditorDemoComponent
-}, {
   name: 'button-group',
   component: ButtonGroupDemoComponent
-}, {
-  name: 'slider',
-  component: SliderDemoComponent
-}, {
-  name: 'loader',
-  component: LoaderDemoComponent
 }, {
   name: 'widget',
   component: WidgetDemoComponent
