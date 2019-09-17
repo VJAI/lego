@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 61678",
+    "start": "ng serve",
     "sprites": "svg-sprite --config sprite-config.json projects/lib/src/assets/icons/*.svg",
-    "test": "ng test --watch=false --code-coverage",
     "build": "ng build lib --prod && gulp lib-package",
-    "build-demo": "ng build demo --prod && gulp demo-package && gulp demo-postinstall",
-    "update-lib-version": "gulp lib-update-version",
-    "update-demo-version": "gulp demo-update-version"
+    "build-demo": "ng build demo --prod && gulp demo-package"
   },
   "dependencies": {
     "@angular/animations": "~8.2.0",

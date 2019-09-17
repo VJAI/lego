@@ -36,7 +36,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo",
+            "outputPath": "docs/lego-demo",
             "index": "projects/demo/src/index.html",
             "main": "projects/demo/src/main.ts",
             "polyfills": "projects/demo/src/polyfills.ts",
@@ -108,7 +108,7 @@
         }
       }
     },
-    "lib": {
+    "lego": {
       "projectType": "library",
       "root": "projects/lib",
       "sourceRoot": "projects/lib/src",
@@ -140,5 +140,5 @@
       }
     }
   },
-  "defaultProject": "lib"
+  "defaultProject": "lego"
 }

@@ -13,8 +13,8 @@ const fs = require('fs');
 const root = './';
 const libSrc = './projects/lib/src';
 const libDest = './dist/lego';
-const demoSrc = './demo';
-const demoDest = './dist/lego-demo';
+const demoSrc = './projects/demo/src';
+const demoDest = './docs/lego-demo';
 
 gulp.task('lib-sass', () => {
   return gulp.src([libSrc, 'scss/**/*.scss'].join('/'))
@@ -48,46 +48,14 @@ gulp.task('lib-copy-misc', () => {
 gulp.task('lib-copy', gulp.series('lib-copy-assets', 'lib-copy-misc'));
 gulp.task('lib-package', gulp.series('lib-sass', 'lib-minify', 'lib-copy'));
 
-gulp.task('lib-update-version', (cb) => {
-  const packageJsonFilePath = [libDest, 'package.json'].join('/');
-  const pkg = JSON.parse(fs.readFileSync(packageJsonFilePath, 'utf8'));
-
-  return gulp.src(packageJsonFilePath)
-    .pipe(bump({ version: pkg.version + '-build.' + process.env.BUILD_NUMBER }))
-    .pipe(gulp.dest(libDest));
-});
-
 gulp.task('demo-copy', () => {
   return gulp.src([
-    [demoSrc, 'package.json'].join('/'),
-    [demoSrc, 'web.config'].join('/'),
-    [demoSrc, 'data/**/*.*'].join('/'),
     [demoSrc, 'assets/**/*.*'].join('/'),
-    [demoSrc, 'api_docs/**/*.*'].join('/'),
     [demoSrc, 'favicon.ico'].join('/')
   ], { base: demoSrc }).pipe(gulp.dest(demoDest));
 });
 
 gulp.task('demo-package', gulp.series('demo-copy'));
-
-gulp.task('demo-postinstall', () => {
-  replace({
-    regex: /(<base href=")(.*?)(">)/,
-    replacement: '<base href="/ui/lego/">',
-    paths: [[demoDest, 'index.html'].join('/')],
-    recursive: false,
-    silent: true
-  });
-});
-
-gulp.task('demo-update-version', () => {
-  const packageJsonFilePath = [demoDest, 'package.json'].join('/');
-  const pkg = JSON.parse(fs.readFileSync(packageJsonFilePath, 'utf8'));
-
-  return gulp.src(packageJsonFilePath)
-    .pipe(bump({ version: pkg.version + '-build.' + process.env.BUILD_NUMBER }))
-    .pipe(gulp.dest(demoDest));
-});
 
 gulp.task('run', () => {
   const file = new nodeStatic.Server(demoDest);
