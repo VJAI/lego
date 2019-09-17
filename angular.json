@@ -124,8 +124,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/lib/tsconfig.lib.json",
-              "projects/lib/tsconfig.spec.json"
+              "projects/lib/tsconfig.lib.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -133,6 +132,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "lib"
 }

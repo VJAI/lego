@@ -1,29 +1,29 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var nodeStatic = require('node-static');
-var http = require('http');
-var exec = require('child_process').exec;
-var replace = require('replace');
-var bump = require('gulp-bump');
-var fs = require('fs');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const nodeStatic = require('node-static');
+const http = require('http');
+const exec = require('child_process').exec;
+const replace = require('replace');
+const bump = require('gulp-bump');
+const fs = require('fs');
 
-var root = './';
-var libSrc = './projects/lib/src';
-var libDest = './dist/lego';
-var demoSrc = './demo';
-var demoDest = './dist/lego-demo';
+const root = './';
+const libSrc = './projects/lib/src';
+const libDest = './dist/lego';
+const demoSrc = './demo';
+const demoDest = './dist/lego-demo';
 
-gulp.task('lib-sass', function () {
+gulp.task('lib-sass', () => {
   return gulp.src([libSrc, 'scss/**/*.scss'].join('/'))
     .pipe(sass())
     .pipe(concat('lego.css'))
     .pipe(gulp.dest([libDest, 'css'].join('/')));
 });
 
-gulp.task('lib-minify', function () {
+gulp.task('lib-minify', () => {
   return gulp.src([libSrc, 'scss/**/*.scss'].join('/'))
     .pipe(sass())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -31,14 +31,14 @@ gulp.task('lib-minify', function () {
     .pipe(gulp.dest([libDest, 'css'].join('/')));
 });
 
-gulp.task('lib-copy-assets', function () {
+gulp.task('lib-copy-assets', () => {
   return gulp.src([
     [libSrc, 'assets/**/*.*'].join('/'),
     [libSrc, 'scss/**/*.*'].join('/')
   ], { base: libSrc }).pipe(gulp.dest(libDest));
 });
 
-gulp.task('lib-copy-misc', function () {
+gulp.task('lib-copy-misc', () => {
   return gulp.src([
     [root, 'LICENSE'].join(''),
     [root, 'README.md'].join('')
@@ -48,16 +48,16 @@ gulp.task('lib-copy-misc', function () {
 gulp.task('lib-copy', gulp.series('lib-copy-assets', 'lib-copy-misc'));
 gulp.task('lib-package', gulp.series('lib-sass', 'lib-minify', 'lib-copy'));
 
-gulp.task('lib-update-version', function (cb) {
-  var packageJsonFilePath = [libDest, 'package.json'].join('/');
-  var pkg = JSON.parse(fs.readFileSync(packageJsonFilePath, 'utf8'));
+gulp.task('lib-update-version', (cb) => {
+  const packageJsonFilePath = [libDest, 'package.json'].join('/');
+  const pkg = JSON.parse(fs.readFileSync(packageJsonFilePath, 'utf8'));
 
   return gulp.src(packageJsonFilePath)
     .pipe(bump({ version: pkg.version + '-build.' + process.env.BUILD_NUMBER }))
     .pipe(gulp.dest(libDest));
 });
 
-gulp.task('demo-copy', function () {
+gulp.task('demo-copy', () => {
   return gulp.src([
     [demoSrc, 'package.json'].join('/'),
     [demoSrc, 'web.config'].join('/'),
@@ -70,7 +70,7 @@ gulp.task('demo-copy', function () {
 
 gulp.task('demo-package', gulp.series('demo-copy'));
 
-gulp.task('demo-postinstall', function () {
+gulp.task('demo-postinstall', () => {
   replace({
     regex: /(<base href=")(.*?)(">)/,
     replacement: '<base href="/ui/lego/">',
@@ -80,20 +80,20 @@ gulp.task('demo-postinstall', function () {
   });
 });
 
-gulp.task('demo-update-version', function () {
-  var packageJsonFilePath = [demoDest, 'package.json'].join('/');
-  var pkg = JSON.parse(fs.readFileSync(packageJsonFilePath, 'utf8'));
+gulp.task('demo-update-version', () => {
+  const packageJsonFilePath = [demoDest, 'package.json'].join('/');
+  const pkg = JSON.parse(fs.readFileSync(packageJsonFilePath, 'utf8'));
 
   return gulp.src(packageJsonFilePath)
     .pipe(bump({ version: pkg.version + '-build.' + process.env.BUILD_NUMBER }))
     .pipe(gulp.dest(demoDest));
 });
 
-gulp.task('run', function () {
-  var file = new nodeStatic.Server(demoDest);
+gulp.task('run', () => {
+  const file = new nodeStatic.Server(demoDest);
   http.createServer(function (request, response) {
     request.addListener('end', function () {
       file.serve(request, response);
     }).resume();
-  }).listen(61678);
+  }).listen(4200);
 });

@@ -6,7 +6,7 @@
     "start": "ng serve --port 61678",
     "sprites": "svg-sprite --config sprite-config.json projects/lib/src/assets/icons/*.svg",
     "test": "ng test --watch=false --code-coverage",
-    "build": "ng lint lego && ng build lego --prod && gulp lib-package",
+    "build": "ng build lib --prod && gulp lib-package",
     "build-demo": "ng lint demo && ng build demo --prod && npm run doc && gulp demo-package && gulp demo-postinstall",
     "update-lib-version": "gulp lib-update-version",
     "update-demo-version": "gulp demo-update-version"
