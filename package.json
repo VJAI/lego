@@ -6,7 +6,7 @@
     "start": "ng serve",
     "sprites": "svg-sprite --config sprite-config.json projects/lib/src/assets/icons/*.svg",
     "build": "ng build lib --prod && gulp lib-package",
-    "build-demo": "ng build demo --prod && gulp demo-package"
+    "build-demo": "ng build demo --prod && gulp demo-package && gulp demo-postinstall"
   },
   "dependencies": {
     "@angular/animations": "~8.2.0",

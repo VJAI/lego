@@ -57,6 +57,18 @@ gulp.task('demo-copy', () => {
 
 gulp.task('demo-package', gulp.series('demo-copy'));
 
+gulp.task('demo-postinstall', done => {
+  replace({
+    regex: /(<base href=")(.*?)(">)/,
+    replacement: '<base href="/lego/">',
+    paths: [[demoDest, 'index.html'].join('/')],
+    recursive: false,
+    silent: true
+  });
+
+  done();
+});
+
 gulp.task('run', () => {
   const file = new nodeStatic.Server(demoDest);
   http.createServer(function (request, response) {
