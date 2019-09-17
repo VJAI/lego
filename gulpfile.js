@@ -14,7 +14,7 @@ const root = './';
 const libSrc = './projects/lib/src';
 const libDest = './dist/lego';
 const demoSrc = './projects/demo/src';
-const demoDest = './docs/lego-demo';
+const demoDest = './docs';
 
 gulp.task('lib-sass', () => {
   return gulp.src([libSrc, 'scss/**/*.scss'].join('/'))
