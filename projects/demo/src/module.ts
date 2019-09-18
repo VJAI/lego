@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonGroupDemoComponent } from './button-group/button-group-demo.component';
 import { ChipsDemoComponent } from './chips/chips-demo.component';
+import { ComponentApiTableComponent } from './comp-api-table/component-api-table.component';
 import { CustomDialogDemoComponent } from './dialog/custom-dialog-demo.component';
 import { DialogDemoComponent } from './dialog/dialog-demo.component';
 import { PopoverDemoComponent } from './popover/popover-demo.component';
@@ -73,7 +74,8 @@ import { WidgetDemoComponent } from './widget/widget-demo.component';
     DialogDemoComponent,
     CustomDialogDemoComponent,
     ButtonGroupDemoComponent,
-    WidgetDemoComponent
+    WidgetDemoComponent,
+    ComponentApiTableComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,53 @@
+@import 'variables';
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.table {
+  color: $mid-gray;
+  line-height: 1.5;
+  font-size: 1rem;
+
+  thead {
+    tr {
+      background-color: $mid-gray;
+      color: $bg-gray;
+
+      th {
+        font-weight: normal;
+
+        &.head-left {
+          text-align: left;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  tbody {
+    td {
+      &.cell-center {
+        text-align: center;
+      }
+    }
+
+    td:nth-child(1) {
+      font-family: $font-family-monospace;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    td:nth-child(2) {
+      text-align: left;
+
+      span {
+        background-color: $white;
+        border: solid 1px $text-gray;
+        padding: 0 5px;
+      }
+    }
+  }
+}

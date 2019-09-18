@@ -1,15 +1,44 @@
-<h1>Introduction</h1>
+<h1 id="intro">Introduction</h1>
 
 <div class="topic-container">
   <div class="topic-main">
-    <h2>Preface</h2>
+    <p>
+      <a href="#">Lego</a> is an UI library built on Angular. It provides set of UI components that helps to build
+      single page apps quicker. It also provides you simple abstractions that helps to build new components easier.
+    </p>
+
+    <h2 id="installing-lego">Installing Lego</h2>
 
     <p>
-      <a href="#">Lego</a> is a Web UI library build using Angular 8. The library provides a set of UI components that
-      acts as the foundation for building Single Page Apps.
+      You can install it from npm.
     </p>
-  </div>
-</div>
 
-<div class="topic-sidenav">
+<pre><code>
+npm install lego --save
+</code> </pre>
+
+    <h2 id="supported-browsers">Supported Browsers</h2>
+
+    <ul>
+      <li>Chrome</li>
+      <li>Safari</li>
+      <li>Opera</li>
+      <li>Firefox</li>
+      <li>Edge</li>
+    </ul>
+  </div>
+
+  <div class="topic-sidenav">
+    <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/intro']" fragment="intro">Introduction</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/intro']" fragment="installing-lego">Installing Lego</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/intro']" fragment="supported-browsers">Supported Browsers</a>
+      </li>
+    </ul>
+  </div>
 </div>

@@ -1,0 +1,60 @@
+{
+  "properties": [
+    {
+      "name": "label",
+      "type": "String",
+      "default": "",
+      "desc": "The label of the button"
+    },
+    {
+      "name": "kind",
+      "type": "String",
+      "default": "normal",
+      "desc": "Represent the type of button. It's an enumeration and the values can be either 'normal', 'split', 'dropdown' or 'kabab'."
+    },
+    {
+      "name": "behavior",
+      "type": "String",
+      "default": "button",
+      "desc": "Equivalent to the HTML button's type. It's an enum and the possible values are 'button', 'submit' or 'reset'."
+    },
+    {
+      "name": "buttonType (button-type)",
+      "type": "String",
+      "default": "false",
+      "desc": "The UI type of button. It's an enum and the possible values are 'primary', 'primaryWarn', 'secondary', 'secondaryWarn' and 'tertiary'."
+    },
+    {
+      "name": "icon",
+      "type": "Boolean",
+      "default": "false",
+      "desc": "The icon name."
+    },
+    {
+      "name": "defaultDropdownHorizontalAlignment",
+      "type": "String",
+      "default": "right",
+      "desc": "The default horizontal alignment of dropdown. It can either 'left' or 'right'"
+    },
+    {
+      "name": "tooltip",
+      "type": "String",
+      "default": "",
+      "desc": "The tooltip text."
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "desc": "The click event."
+    },{
+      "name": "button-click",
+      "desc": "The click event. Can be used for programatic subscription."
+    },
+    {
+      "name": "option-click",
+      "desc": "This event is fired whenever an option is clicked in dropdown/split/kebab."
+    }
+  ]
+}
+

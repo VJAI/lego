@@ -1,0 +1,60 @@
+<ng-container *ngIf="data.properties && data.properties.length">
+  <h3>Properties</h3>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="head-left" style="width: 30%">Name</th>
+      <th class="head-left" style="width: 20%">Type</th>
+      <th class="head-left" style="width: 10%">Default?</th>
+      <th class="head-left" style="width: 40%">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of data.properties">
+      <td>{{row.name}}</td>
+      <td><span>{{row.type}}</span></td>
+      <td>{{row.default}}</td>
+      <td>{{row.desc}}</td>
+    </tr>
+    </tbody>
+  </table>
+</ng-container>
+
+<ng-container *ngIf="data.methods && data.methods.length">
+  <h3>Methods</h3>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="head-left" style="width: 40%">Name</th>
+      <th class="head-left" style="width: 60%">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of data.methods">
+      <td>{{row.name}}</td>
+      <td>{{row.desc}}</td>
+    </tr>
+    </tbody>
+  </table>
+</ng-container>
+
+<ng-container *ngIf="data.events && data.events.length">
+  <h3>Events</h3>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="head-left" style="width: 40%">Name</th>
+      <th class="head-left" style="width: 60%">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of data.events">
+      <td>{{row.name}}</td>
+      <td>{{row.desc}}</td>
+    </tr>
+    </tbody>
+  </table>
+</ng-container>

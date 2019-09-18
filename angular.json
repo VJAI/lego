@@ -44,7 +44,8 @@
             "aot": false,
             "assets": [
               "projects/demo/src/favicon.ico",
-              "projects/demo/src/assets"
+              "projects/demo/src/assets",
+              "projects/demo/src/data"
             ],
             "styles": [
               "projects/demo/src/styles.scss"
