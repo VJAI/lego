@@ -18,6 +18,9 @@ h3 {
 
       th {
         font-weight: normal;
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid #efefef;
 
         &.head-left {
           text-align: left;
@@ -29,6 +32,10 @@ h3 {
 
   tbody {
     td {
+      padding: .75rem;
+      vertical-align: top;
+      border-top: 1px solid #efefef;
+
       &.cell-center {
         text-align: center;
       }

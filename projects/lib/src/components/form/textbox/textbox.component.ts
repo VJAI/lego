@@ -30,7 +30,7 @@ export class TextboxComponent extends LegoBaseInputComponent<string> {
   public step: number;
 
   @Input()
-  public datatype: Datatype;
+  public datatype = Datatype.Text;
 
   public get value(): string {
     return this.data;

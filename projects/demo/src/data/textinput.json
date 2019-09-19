@@ -1,0 +1,76 @@
+{
+  "properties": [
+    {
+      "name": "label",
+      "type": "String",
+      "default": "",
+      "desc": "The label of the textbox."
+    },
+    {
+      "name": "placeholder",
+      "type": "String",
+      "default": "",
+      "desc": "The placeholder text."
+    },
+    {
+      "name": "minlength",
+      "type": "Number",
+      "default": "",
+      "desc": "The minimum length of characters the textbox should accept."
+    },
+    {
+      "name": "maxlength",
+      "type": "Number",
+      "default": "",
+      "desc": "The maximum length of characters the textbox should accept."
+    },
+    {
+      "name": "auto-complete",
+      "type": "Bool",
+      "default": "",
+      "desc": "`True` to enable autocomplete."
+    },
+    {
+      "name": "min-value",
+      "type": "Number",
+      "default": "",
+      "desc": "The minimum value the textbox can accept in case of numeric types."
+    },
+    {
+      "name": "max-value",
+      "type": "Number",
+      "default": "",
+      "desc": "The maximum value the textbox can accept in case of numeric types."
+    },
+    {
+      "name": "step",
+      "type": "Number",
+      "default": "",
+      "desc": "The incremental step for numeric types."
+    },
+    {
+      "name": "datatype",
+      "type": "String",
+      "default": "",
+      "desc": "The type of the textbox. Possible values are 'text', 'password', 'number', 'email'."
+    },
+    {
+      "name": "minlength-err-message",
+      "type": "String",
+      "default": "Length should not be less than {minlength} characters.",
+      "desc": "The default min length error message."
+    },
+    {
+      "name": "maxlength-err-message",
+      "type": "String",
+      "default": "Length should not be greater than {maxlength} characters.",
+      "desc": "The default max length error message."
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "desc": "The textbox input event."
+    }
+  ]
+}

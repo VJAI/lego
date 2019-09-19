@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "name": "label",
+      "type": "String",
+      "default": "",
+      "desc": "The label of the textarea."
+    },
+    {
+      "name": "placeholder",
+      "type": "String",
+      "default": "",
+      "desc": "The placeholder text."
+    },
+    {
+      "name": "rows",
+      "type": "Number",
+      "default": "",
+      "desc": "The visible number of lines in a text area."
+    },
+    {
+      "name": "maxlength",
+      "type": "Number",
+      "default": "",
+      "desc": "The maximum number of characters the textarea can accept."
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "desc": "The textarea input event."
+    }
+  ]
+}
