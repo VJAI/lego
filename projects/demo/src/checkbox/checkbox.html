@@ -1,7 +1,11 @@
-<h1>Checkboxes &amp; Radiobuttons</h1>
+<h1 id="intro">Checkboxes &amp; Radiobuttons</h1>
 
 <div class="topic-container">
   <div class="topic-main">
+
+    <p>
+      Lego provides custom checkboxes and radio-buttons that are wrappers over the native ones.
+    </p>
 
     <h2 id="checkbox">Checkbox</h2>
 
@@ -108,14 +112,29 @@
       </demo-tab>
       <demo-tab heading="Markup">
 <pre>
-<code></code>
+<code>&lt;lego-radiobutton horizontal label="Select Gender"&gt;
+  &lt;lego-radiobutton-option key="1"&gt;Male&lt;/lego-radiobutton-option&gt;
+  &lt;lego-radiobutton-option key="2"&gt;Female&lt;/lego-radiobutton-option&gt;
+  &lt;lego-radiobutton-option key="3"&gt;Other&lt;/lego-radiobutton-option&gt;
+&lt;/lego-radiobutton&gt;</code>
 </pre>
       </demo-tab>
     </demo-tabs>
+
+    <h2 id="checkbox-api">API for Checkbox</h2>
+
+    <demo-comp-table file-name="checkbox"></demo-comp-table>
+
+    <h2 id="radiobutton-api">API for Radiobutton</h2>
+
+    <demo-comp-table file-name="radiobutton"></demo-comp-table>
   </div>
 
   <div class="topic-sidenav">
     <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/checkbox']" fragment="intro">Intro</a>
+      </li>
       <li>
         <a [routerLink]="['/demo/checkbox']" fragment="checkbox">Checkbox</a>
         <ul>
@@ -143,6 +162,12 @@
             <a [routerLink]="['/demo/checkbox']" fragment="horizontal">Horizontal</a>
           </li>
         </ul>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/checkbox']" fragment="checkbox-api">API for Checkbox</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/checkbox']" fragment="radiobutton-api">API for Radiobutton</a>
       </li>
     </ul>
   </div>

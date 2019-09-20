@@ -1,0 +1,16 @@
+{
+  "properties": [
+    {
+      "name": "label",
+      "type": "String",
+      "default": "",
+      "desc": "The label of the radiobutton."
+    },
+    {
+      "name": "horizontal",
+      "type": "Bool",
+      "default": "false",
+      "desc": "`True` for aligning the buttons in horizontal."
+    }
+  ]
+}

@@ -55,7 +55,7 @@
 
     <demo-tabs>
       <demo-tab heading="Preview">
-        <lego-card-list nav-out>
+        <lego-card-list>
           <lego-card>
             <demo-card-content>
               <div class="header">
@@ -123,6 +123,75 @@
           </lego-card>
         </lego-card-list>
       </demo-tab>
+      <demo-tab heading="Markup">
+<pre><code>&lt;lego-card-list&gt;
+  &lt;lego-card&gt;
+    &lt;demo-card-content&gt;
+      &lt;div class="header"&gt;
+        &lt;img src="./assets/images/Captain-America.jpg" width="400"&gt;
+      &lt;/div&gt;
+      &lt;div class="footer"&gt;
+        &lt;h4&gt;Captain America&lt;/h4&gt;
+      &lt;/div&gt;
+    &lt;/demo-card-content&gt;
+  &lt;/lego-card&gt;
+
+  &lt;lego-card&gt;
+    &lt;demo-card-content&gt;
+      &lt;div class="header"&gt;
+        &lt;img src="./assets/images/chris-hemsworth.jpg" width="400"&gt;
+      &lt;/div&gt;
+      &lt;div class="footer"&gt;
+        &lt;h4&gt;Thor&lt;/h4&gt;
+      &lt;/div&gt;
+    &lt;/demo-card-content&gt;
+  &lt;/lego-card&gt;
+
+  &lt;lego-card&gt;
+    &lt;demo-card-content&gt;
+      &lt;div class="header"&gt;
+        &lt;img src="./assets/images/hulk.jpg" width="400"&gt;
+      &lt;/div&gt;
+      &lt;div class="footer"&gt;
+        &lt;h4&gt;Hulk&lt;/h4&gt;
+      &lt;/div&gt;
+    &lt;/demo-card-content&gt;
+  &lt;/lego-card&gt;
+
+  &lt;lego-card&gt;
+    &lt;demo-card-content&gt;
+      &lt;div class="header"&gt;
+        &lt;img src="./assets/images/ironman.jpg" width="400"&gt;
+      &lt;/div&gt;
+      &lt;div class="footer"&gt;
+        &lt;h4&gt;Ironman&lt;/h4&gt;
+      &lt;/div&gt;
+    &lt;/demo-card-content&gt;
+  &lt;/lego-card&gt;
+
+  &lt;lego-card&gt;
+    &lt;demo-card-content&gt;
+      &lt;div class="header"&gt;
+        &lt;img src="./assets/images/spiderman.jpg" width="400"&gt;
+      &lt;/div&gt;
+      &lt;div class="footer"&gt;
+        &lt;h4&gt;Spiderman&lt;/h4&gt;
+      &lt;/div&gt;
+    &lt;/demo-card-content&gt;
+  &lt;/lego-card&gt;
+
+  &lt;lego-card&gt;
+    &lt;demo-card-content&gt;
+      &lt;div class="header"&gt;
+        &lt;img src="./assets/images/wonderwoman.jpg" width="400"&gt;
+      &lt;/div&gt;
+      &lt;div class="footer"&gt;
+        &lt;h4&gt;Wonder Woman&lt;/h4&gt;
+      &lt;/div&gt;
+    &lt;/demo-card-content&gt;
+  &lt;/lego-card&gt;
+&lt;/lego-card-list&gt;</code></pre>
+      </demo-tab>
     </demo-tabs>
 
     <h3 id="matrix">Matrix</h3>
@@ -130,6 +199,10 @@
     <p>
       To display the cards in two dimensional you need to add the attribute <code>matrix</code>. Please click <a routerLink="/demo/cardlist">here</a> to see the demo.
     </p>
+
+    <h2 id="api">API</h2>
+
+    <demo-comp-table file-name="cardlist"></demo-comp-table>
   </div>
 
   <div class="topic-sidenav">
@@ -150,6 +223,9 @@
             <a [routerLink]="['/demo/card']" fragment="matrix">Matrix</a>
           </li>
         </ul>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/card']" fragment="api">API</a>
       </li>
     </ul>
   </div>

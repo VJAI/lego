@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 export class TextDemoComponent {
 
-  public userName: string;
+  public userName = 'Vijaya Anand';
 }

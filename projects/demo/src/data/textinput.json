@@ -55,6 +55,18 @@
       "desc": "The type of the textbox. Possible values are 'text', 'password', 'number', 'email'."
     },
     {
+      "name": "required",
+      "type": "Bool",
+      "default": "false",
+      "desc": "Passing `true` will turn the control into required."
+    },
+    {
+      "name": "required-err-message",
+      "type": "String",
+      "default": "{label} is required.",
+      "desc": "The default required error message."
+    },
+    {
       "name": "minlength-err-message",
       "type": "String",
       "default": "Length should not be less than {minlength} characters.",
@@ -65,12 +77,28 @@
       "type": "String",
       "default": "Length should not be greater than {maxlength} characters.",
       "desc": "The default max length error message."
+    },
+    {
+      "name": "disabled",
+      "type": "Bool",
+      "default": "false",
+      "desc": "Passing `true` will disable the textbox."
+    },
+    {
+      "name": "hide-error",
+      "type": "Bool",
+      "default": "false",
+      "desc": "Passing `true` will not display the error message."
     }
   ],
   "events": [
     {
       "name": "input",
       "desc": "The textbox input event."
+    },
+    {
+      "name": "change",
+      "desc": "The textbox change event."
     }
   ]
 }

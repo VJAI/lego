@@ -1,0 +1,16 @@
+{
+  "properties": [
+    {
+      "name": "matrix",
+      "type": "Bool",
+      "default": "false",
+      "desc": "Passing `true` will display the list of cards in two dimension."
+    },
+    {
+      "name": "spacing",
+      "type": "Number",
+      "default": "32",
+      "desc": "The spacing between cards in pixels."
+    }
+  ]
+}

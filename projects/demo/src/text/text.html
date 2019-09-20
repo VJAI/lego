@@ -16,6 +16,8 @@
       You can create a simple textbox by passing the <code>label</code> and <code>placeholder</code> attributes.
     </p>
 
+    <h3 id="example">Example</h3>
+
     <demo-tabs>
       <demo-tab heading="Preview">
         <lego-textbox label="User Name" placeholder="Type User Name"></lego-textbox>
@@ -23,6 +25,24 @@
       <demo-tab heading="Markup">
 <pre>
 <code>&lt;lego-textbox label="User Name" placeholder="Type User Name"&gt;&lt;/lego-textbox&gt;</code>
+</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="setting-value">Setting Value</h3>
+
+    <p>
+      You can set value using either <code>ngModel</code> if you are using classic forms or <code>formControl</code>/<code>formControlName</code> in
+      case of reactive forms.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-textbox label="User Name" placeholder="Type User Name" [(ngModel)]="userName"></lego-textbox>
+      </demo-tab>
+      <demo-tab heading="Markup">
+<pre>
+<code>&lt;lego-textbox label="User Name" placeholder="Type User Name" [(ngModel)]="userName"&gt;&lt;/lego-textbox&gt;</code>
 </pre>
       </demo-tab>
     </demo-tabs>
@@ -201,6 +221,12 @@
       <li>
         <a [routerLink]="['/demo/text']" fragment="textbox">Textbox</a>
         <ul>
+          <li>
+            <a [routerLink]="['/demo/text']" fragment="example">Example</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/text']" fragment="setting-value">Setting Value</a>
+          </li>
           <li>
             <a [routerLink]="['/demo/text']" fragment="password">Password Textbox</a>
           </li>

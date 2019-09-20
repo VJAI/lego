@@ -23,6 +23,12 @@
       "type": "Number",
       "default": "",
       "desc": "The maximum number of characters the textarea can accept."
+    },
+    {
+      "name": "disabled",
+      "type": "Bool",
+      "default": "false",
+      "desc": "Passing `true` will disable the textarea."
     }
   ],
   "events": [

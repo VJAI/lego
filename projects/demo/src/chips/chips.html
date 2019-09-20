@@ -3,6 +3,10 @@
 <div class="topic-container">
   <div class="topic-main">
 
+    <p>
+      The chips component can used to display a collection like selected items in a picklist.
+    </p>
+
     <h2 id="example">Example</h2>
 
     <demo-tabs>
@@ -36,7 +40,7 @@
       </demo-tab>
       <demo-tab heading="Markup">
 <pre>
-<code>&lt;lego-chips&gt;
+<code>&lt;lego-chips delete&gt;
   &lt;lego-chip&gt;HTML&lt;/lego-chip&gt;
   &lt;lego-chip&gt;CSS&lt;/lego-chip&gt;
   &lt;lego-chip&gt;JavaScript&lt;/lego-chip&gt;
@@ -49,7 +53,13 @@
   <div class="topic-sidenav">
     <ul demo-sticky>
       <li>
+        <a [routerLink]="['/demo/chips']" fragment="intro">Intro</a>
+      </li>
+      <li>
         <a [routerLink]="['/demo/chips']" fragment="example">Example</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/chips']" fragment="removable-chips">Chips With Remove Icon</a>
       </li>
     </ul>
   </div>

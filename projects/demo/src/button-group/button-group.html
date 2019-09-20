@@ -9,7 +9,7 @@
       Button Group component allows you to group a series of options together (on a single line) in a button group. Only one can be selected at the same time.
     </p>
 
-    <h2>Demo</h2>
+    <h2 id="demo">Demo</h2>
 
     <demo-tabs>
       <demo-tab heading="Preview">
@@ -22,10 +22,19 @@
           </lego-button-group-option>
         </lego-button-group>
       </demo-tab>
-      <demo-tab heading="Markup"></demo-tab>
+      <demo-tab heading="Markup">
+<pre><code>&lt;lego-button-group selected="2" label="Select Phone"&gt;
+  &lt;lego-button-group-option key="1" value="iPhone"&gt;
+  &lt;/lego-button-group-option&gt;
+  &lt;lego-button-group-option key="2" value="Samsung"&gt;
+  &lt;/lego-button-group-option&gt;
+  &lt;lego-button-group-option key="3" value="Motorola"&gt;
+  &lt;/lego-button-group-option&gt;
+&lt;/lego-button-group&gt;</code></pre>
+      </demo-tab>
     </demo-tabs>
 
-    <h2>Disabled</h2>
+    <h2 id="disabled">Disabled</h2>
 
     <demo-tabs>
       <demo-tab heading="Preview">
@@ -38,10 +47,19 @@
           </lego-button-group-option>
         </lego-button-group>
       </demo-tab>
-      <demo-tab heading="Markup"></demo-tab>
+      <demo-tab heading="Markup">
+<pre><code>&lt;lego-button-group disabled selected="Samsung"&gt;
+  &lt;lego-button-group-option value="iPhone"&gt;
+  &lt;/lego-button-group-option&gt;
+  &lt;lego-button-group-option value="Samsung"&gt;
+  &lt;/lego-button-group-option&gt;
+  &lt;lego-button-group-option value="Motorola"&gt;
+  &lt;/lego-button-group-option&gt;
+&lt;/lego-button-group&gt;</code></pre>
+      </demo-tab>
     </demo-tabs>
 
-    <h2>Using With Reactive Form</h2>
+    <h2 id="using-with-reactive">Using With Reactive Form</h2>
 
     <demo-tabs>
       <demo-tab heading="Preview">
@@ -54,7 +72,16 @@
           </lego-button-group-option>
         </lego-button-group>
       </demo-tab>
-      <demo-tab heading="Markup"></demo-tab>
+      <demo-tab heading="Markup">
+<pre><code>&lt;lego-button-group [(ngModel)]="selectedPhone" label="Select Phone"&gt;
+  &lt;lego-button-group-option key="1" value="iPhone"&gt;
+  &lt;/lego-button-group-option&gt;
+  &lt;lego-button-group-option key="2" value="Samsung"&gt;
+  &lt;/lego-button-group-option&gt;
+  &lt;lego-button-group-option key="3" value="Motorola"&gt;
+  &lt;/lego-button-group-option&gt;
+&lt;/lego-button-group&gt;</code></pre>
+      </demo-tab>
     </demo-tabs>
   </div>
 
@@ -62,6 +89,15 @@
     <ul demo-sticky>
       <li>
         <a [routerLink]="['/demo/button-group']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/button-group']" fragment="demo">Demo</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/button-group']" fragment="disabled">Disabled</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/button-group']" fragment="using-with-reactive">Using With Reactive Form</a>
       </li>
     </ul>
   </div>
