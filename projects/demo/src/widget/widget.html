@@ -3,23 +3,29 @@
 <div class="topic-container">
   <div class="topic-main">
 
-    <h2>Overview</h2>
+    <h2 id="overview">Overview</h2>
 
     <p>
       Widgets helps to display components in a nice container.
     </p>
 
-    <h2>Demo</h2>
+    <h2 id="demo">Demo</h2>
 
     <demo-tabs>
       <demo-tab heading="Preview">
         <lego-widget title="Sample Widget">
-          <p>
+          <p style="padding: 10px">
             Lorem ipsum dolor smit ameit bolo thurama naam hyaan kei.
           </p>
         </lego-widget>
       </demo-tab>
-      <demo-tab heading="Markup"></demo-tab>
+      <demo-tab heading="Markup">
+<pre><code>&lt;lego-widget title="Sample Widget"&gt;
+  &lt;p style="padding: 10px"&gt;
+    Lorem ipsum dolor smit ameit bolo thurama naam hyaan kei.
+  &lt;/p&gt;
+&lt;/lego-widget&gt;</code></pre>
+      </demo-tab>
     </demo-tabs>
   </div>
 
@@ -27,6 +33,9 @@
     <ul demo-sticky>
       <li>
         <a [routerLink]="['/demo/widget']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/widget']" fragment="demo">Demo</a>
       </li>
     </ul>
   </div>

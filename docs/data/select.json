@@ -1,0 +1,64 @@
+{
+  "properties": [
+    {
+      "name": "label",
+      "type": "String",
+      "default": "",
+      "desc": "The dropdown label."
+    },
+    {
+      "name": "placeholder",
+      "type": "String",
+      "default": "",
+      "desc": "The placeholder text."
+    },
+    {
+      "name": "multiple",
+      "type": "Bool",
+      "default": "false",
+      "desc": "`True` will turn the control into multiselect."
+    },
+    {
+      "name": "clear-text",
+      "type": "String",
+      "default": "Clear Selection",
+      "desc": "The clear selection option text."
+    },
+    {
+      "name": "empty-text",
+      "type": "String",
+      "default": "",
+      "desc": "Empty options text message. Default no text is displayed."
+    },
+    {
+      "name": "min-dropdown-width",
+      "type": "Number",
+      "default": "0",
+      "desc": "The minimum width of dropdown."
+    },
+    {
+      "name": "max-dropdown-width",
+      "type": "Number",
+      "default": "Infinity",
+      "desc": "The maximum width of dropdown."
+    },
+    {
+      "name": "sync-width",
+      "type": "Bool",
+      "default": "true",
+      "desc": "Synchronizes the width of the dropdown to the textbox."
+    },
+    {
+      "name": "dropdown-css",
+      "type": "String",
+      "default": "",
+      "desc": "CSS classes attached to dropdown."
+    },
+    {
+      "name": "container-css-classes",
+      "type": "String",
+      "default": "",
+      "desc": "CSS classes attached to the dropdown container."
+    }
+  ]
+}

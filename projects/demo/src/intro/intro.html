@@ -3,7 +3,7 @@
 <div class="topic-container">
   <div class="topic-main">
     <p>
-      <a href="#">Lego</a> is an UI library built on Angular. It provides set of UI components that helps to build
+      <a href="https://github.com/vjai/lego">Lego</a> is an UI library built on Angular. It provides set of UI components that helps to build
       single page apps quicker. It also provides you simple abstractions that helps to build new components easier.
     </p>
 
@@ -16,6 +16,31 @@
 <pre><code>
 npm install lego --save
 </code> </pre>
+
+    <h2 id="importing">Importing in App</h2>
+
+    <p>
+      Importing the module in app.module.ts.
+    </p>
+
+<pre><code>import &#123; LegoModule &#125; from 'lego';
+
+&#64;NgModule(&#123;
+  imports: [
+    LegoModule,
+    ...
+  ]
+&#125;)
+export class AppModule &#123;
+&#125;</code></pre>
+
+    <p>
+      Importing the SCSS file in styles.scss.
+    </p>
+
+<pre><code>$lego-assets-path: '../projects/core/assets/' !default;
+
+&#64;import 'lego/scss/lego';</code></pre>
 
     <h2 id="supported-browsers">Supported Browsers</h2>
 

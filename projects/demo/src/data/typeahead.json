@@ -1,0 +1,58 @@
+{
+  "properties": [
+    {
+      "name": "label",
+      "type": "String",
+      "default": "",
+      "desc": "The dropdown label."
+    },
+    {
+      "name": "placeholder",
+      "type": "String",
+      "default": "",
+      "desc": "The placeholder text."
+    },
+    {
+      "name": "multiple",
+      "type": "Bool",
+      "default": "false",
+      "desc": "`True` will turn the control into multiselect."
+    },
+    {
+      "name": "source",
+      "type": "Array<any> | IQueryableDataSource",
+      "default": "",
+      "desc": "The data source."
+    },
+    {
+      "name": "id-string",
+      "type": "String",
+      "default": "id",
+      "desc": "The name of property for id."
+    },
+    {
+      "name": "value-string",
+      "type": "String",
+      "default": "value",
+      "desc": "The name of property for value."
+    },
+    {
+      "name": "min-chars",
+      "type": "Number",
+      "default": "0",
+      "desc": "The minimum number of characters to enter in typeahead for searching."
+    },
+    {
+      "name": "delay",
+      "type": "Number",
+      "default": "250",
+      "desc": "The waiting period before starting the search."
+    },
+    {
+      "name": "container-css-classes",
+      "type": "String",
+      "default": "",
+      "desc": "CSS classes attached to the dropdown container."
+    }
+  ]
+}
