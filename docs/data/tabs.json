@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "tabs-align",
+      "type": "String",
+      "default": "left",
+      "desc": "The possible values are 'left', 'right', and 'center'."
+    }
+  ]
+}

@@ -17,6 +17,12 @@
       "type": "String",
       "default": "button",
       "desc": "Equivalent to the HTML button's type. It's an enum and the possible values are 'button', 'submit', 'search' or 'reset'."
+    },
+    {
+      "name": "disabled",
+      "type": "Bool",
+      "default": "false",
+      "desc": "Passing `true` will disable the button."
     }
   ],
   "events": [

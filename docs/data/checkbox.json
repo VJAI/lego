@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "label",
+      "type": "String",
+      "default": "",
+      "desc": "The label of the checkbox."
+    }
+  ]
+}
