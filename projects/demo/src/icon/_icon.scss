@@ -1,0 +1,50 @@
+@import 'variables';
+@import '../demo-variables';
+
+.icons-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr) );
+  grid-gap: 20px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #ccc;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    height: 120px;
+    transition: 0.25s;
+    cursor: pointer;
+
+    lego-icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      pointer-events: none;
+    }
+
+    span {
+      word-wrap: break-word;
+      width: 100%;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    &:hover {
+      border: solid 2px #333;
+      box-shadow: 0 0 10px $text-gray;
+    }
+  }
+}
+
+// Examples
+#moreInfo {
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+
+#moreInfo:hover {
+  color: #0079CC;
+}

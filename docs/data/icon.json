@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "icon",
+      "type": "String",
+      "default": "",
+      "desc": "The icon name."
+    }
+  ]
+}

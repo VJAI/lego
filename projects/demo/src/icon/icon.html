@@ -1,13 +1,154 @@
-<h1>Iconography</h1>
+<h1 id="overview">Iconography</h1>
 
 <div class="topic-container">
   <div class="topic-main">
+    <p>
+      The Lego icon library is a set of SVG icons that can be used to add inline SVG to html. This allows for
+      developers to easily size and color individual icons within their application.
+    </p>
 
-    <h2>Icons</h2>
+    <h2 id="basic-icon">Basic Icon</h2>
 
-    <div class="preview-container">
-      <lego-icon icon="eye"></lego-icon>
+    <p>
+      The basic usage of the <code>&lt;lego-icon&gt;</code> component will produce a 24 X 24 inline svg icon that inherits the color attribute of it's parent.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-icon title="Setting" icon="Nav_Cog"></lego-icon>
+      </demo-tab>
+      <demo-tab heading="Markup">
+        <pre>&lt;lego-icon icon="Nav_Cog"&gt;&lt;/lego-icon&gt;</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h2 id="custom-styling">Custom Styling</h2>
+
+    <p>
+      Icons can accept styling via CSS to customize properties such as color and size. The default size will be 24 X 24 and the color will be the current text color of the parent element. Styling can also be applied to the css pseudo classes such as <b>hover</b> and <b>active</b>.
+    </p>
+
+    <h3 id="custom-coloring">Custom Coloring</h3>
+
+    <p>
+      To override the color of the icon simply set the css <code>color</code> property to the desired value.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-icon icon="Nav_Bell" style="color: red"></lego-icon>
+        <lego-icon icon="Nav_Bell" style="color: green"></lego-icon>
+        <lego-icon icon="Nav_Bell" style="color: blue"></lego-icon>
+        <lego-icon icon="Attachment" style="color: red"></lego-icon>
+        <lego-icon icon="Attachment" style="color: green"></lego-icon>
+        <lego-icon icon="Attachment" style="color: blue"></lego-icon>
+      </demo-tab>
+      <demo-tab heading="Markup">
+    <pre>&lt;lego-icon icon="Nav_Bell" style="color: red"&gt;&lt;/lego-icon&gt;
+&lt;lego-icon icon="Nav_Bell" style="color: green"&gt;&lt;/lego-icon&gt;
+&lt;lego-icon icon="Nav_Bell" style="color: blue"&gt;&lt;/lego-icon&gt;
+&lt;lego-icon icon="Attachment" style="color: red"&gt;&lt;/lego-icon&gt;
+&lt;lego-icon icon="Attachment" style="color: green"&gt;&lt;/lego-icon&gt;
+&lt;lego-icon icon="Attachment" style="color: blue"&gt;&lt;/lego-icon&gt;</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="custom-sizing">Custom Sizing</h3>
+
+    <p>
+      To override the size of the icon set both the width and height of the icon.
+    </p>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-icon icon="Customers_Group" style="width: 36px; height: 36px;"></lego-icon>
+        <lego-icon icon="Customers_Group" style="width: 48px; height: 48px;"></lego-icon>
+        <lego-icon icon="Customers_Group" style="width: 64px; height: 64px;"></lego-icon>
+      </demo-tab>
+      <demo-tab heading="Markup">
+    <pre>&lt;lego-icon icon="Customers_Group" style="width: 36px; height: 36px;"&gt;&lt;/lego-icon&gt;
+&lt;lego-icon icon="Customers_Group" style="width: 48px; height: 48px;"&gt;&lt;/lego-icon&gt;
+&lt;lego-icon icon="Customers_Group" style="width: 64px; height: 64px;"&gt;&lt;/lego-icon&gt;</pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <h3 id="hover-effect">Hover Effect</h3>
+
+    <demo-tabs>
+      <demo-tab heading="Preview">
+        <lego-icon id="moreInfo" icon="Info_Circle"></lego-icon>
+      </demo-tab>
+      <demo-tab heading="Markup">
+    <pre>
+HTML
+
+&lt;lego-icon id="moreInfo" icon="Info_Circle"&gt;&lt;/lego-icon&gt;
+
+CSS
+
+#moreInfo &#123;
+ cursor: pointer;
+ transition: color .2s ease-in-out;
+&#125;
+
+#moreInfo:hover &#123;
+ color: #0079CC;
+&#125;
+    </pre>
+      </demo-tab>
+    </demo-tabs>
+
+    <p>
+      Icons can be given special styling through the css pseudo class hover. This is useful for clickable icons used for controlls.
+    </p>
+
+    <h2 id="reference">Icon Reference</h2>
+
+    <p>
+      Click icon to quick copy the code to clipboard.
+    </p>
+
+    <div class="icons-table">
+      <div *ngFor="let icon of icons" (click)="copy($event)" title="Click to copy">
+        <lego-icon [icon]="icon" size="34"></lego-icon>
+        <span>{{icon}}</span>
+      </div>
     </div>
+
+    <h2 id="api">API</h2>
+
+    <demo-comp-table file-name="icon"></demo-comp-table>
+  </div>
+
+  <div class="topic-sidenav">
+    <ul demo-sticky>
+      <li>
+        <a [routerLink]="['/demo/icon']" fragment="overview">Overview</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/icon']" fragment="basic-icon">Basic Icon</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/icon']" fragment="custom-styling">Custom Styling</a>
+        <ul>
+          <li>
+            <a [routerLink]="['/demo/icon']" fragment="custom-coloring">Custom Coloring</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/icon']" fragment="custom-sizing">Custom Sizing</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/icon']" fragment="hover-effect">Hover Effect</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/icon']" fragment="reference">Icon Reference</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/icon']" fragment="api">API</a>
+      </li>
+    </ul>
   </div>
 </div>
 
