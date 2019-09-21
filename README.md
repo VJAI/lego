@@ -7,7 +7,7 @@
 You can install it from npm.
 
 ```
-npm install lego --save
+npm install lego-ui-kit --save
 ```
 
 ## Importing in App
@@ -15,7 +15,7 @@ npm install lego --save
 Importing the module in app.module.ts.
 
 ```
-import { LegoModule } from 'lego';
+import { LegoModule } from 'lego-ui-kit';
 
 @NgModule({
   imports: [
@@ -32,7 +32,7 @@ Importing the SCSS file in styles.scss.
 ```
 $lego-assets-path: '../projects/core/assets/' !default;
 
-@import 'lego/scss/lego';
+@import 'lego-ui-kit/scss/lego';
 ```
 
 ## Supported Browsers
