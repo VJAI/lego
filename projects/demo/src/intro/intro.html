@@ -3,7 +3,7 @@
 <div class="topic-container">
   <div class="topic-main">
     <p>
-      <a href="https://github.com/vjai/lego">Lego</a> is an UI library built on Angular. It provides set of UI components that helps to build
+      <a href="https://github.com/vjai/lego">Lego</a> is an UI library built on Angular using CDK. It provides set of UI components that helps to build
       single page apps quicker. It also provides you simple abstractions that helps to build new components easier.
     </p>
 
@@ -15,6 +15,14 @@
 
 <pre><code>
 npm install lego-ui-kit --save
+</code> </pre>
+
+    <p>
+      Lego needs Angular CDK library to be installed. You can install it running the below command.
+    </p>
+
+    <pre><code>
+npm install &#64;angular/cdk --save
 </code> </pre>
 
     <h2 id="importing">Importing in App</h2>
@@ -38,9 +46,11 @@ export class AppModule &#123;
       Importing the SCSS file in styles.scss.
     </p>
 
-<pre><code>$lego-assets-path: '../projects/core/assets/' !default;
+<pre><code>&#64;import '~lego-ui-kit/scss/lego';</code></pre>
 
-&#64;import 'lego-ui-kit/scss/lego';</code></pre>
+    <p>
+      Copy the icon sprite file from "lego-ui-kit/assets/icons/Svg/sprite.css.svg" to your project "assets/images" folder.
+    </p>
 
     <h2 id="supported-browsers">Supported Browsers</h2>
 
