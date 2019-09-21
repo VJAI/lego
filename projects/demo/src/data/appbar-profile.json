@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "profile-img",
+      "type": "String",
+      "default": "",
+      "desc": "The profile image url."
+    }
+  ]
+}

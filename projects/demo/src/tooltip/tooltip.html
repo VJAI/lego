@@ -6,7 +6,7 @@
     <h2 id="overview">Overview</h2>
 
     <p>
-      Tooltips helps to display additional information.
+      Tooltips helps to display additional information. You can add tooltip to any element through the directive.
     </p>
 
     <h2 id="example">Example</h2>
@@ -55,10 +55,14 @@
       </demo-tab>
       <demo-tab heading="Markup">
 <pre>
-<code>&lt;lego-button type="secondary" lego-tooltip="l.e.g.o is the best UI library ever made">&gt;Know More&lt;/lego-button&gt;</code>
+<code>&lt;lego-button lego-tooltip="This is a lengthier text. This is a lengthier text. This is a lengthier text. This is a lengthier text. This is a lengthier text." [tooltip-length]="50"&gt;Know More&lt;/lego-button&gt;</code>
 </pre>
       </demo-tab>
     </demo-tabs>
+
+    <h2 id="api">API</h2>
+
+    <demo-comp-table file-name="tooltip"></demo-comp-table>
   </div>
 
   <div class="topic-sidenav">
@@ -74,6 +78,9 @@
       </li>
       <li>
         <a [routerLink]="['/demo/tooltip']" fragment="maxlength">Maxlength</a>
+      </li>
+      <li>
+        <a [routerLink]="['/demo/tooltip']" fragment="api">API</a>
       </li>
     </ul>
   </div>

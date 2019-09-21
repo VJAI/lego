@@ -1,0 +1,28 @@
+{
+  "properties": [
+    {
+      "name": "lego-tooltip",
+      "type": "String",
+      "default": "",
+      "desc": "The tooltip text."
+    },
+    {
+      "name": "dark-mode",
+      "type": "Bool",
+      "default": "false",
+      "desc": "Pass `true` to enable dark mode."
+    },
+    {
+      "name": "on-demand",
+      "type": "Bool",
+      "default": "false",
+      "desc": "Show tooltip only when the length exceeds."
+    },
+    {
+      "name": "tooltip-length",
+      "type": "Number",
+      "default": "500",
+      "desc": "The maximum length of the tooltip."
+    }
+  ]
+}

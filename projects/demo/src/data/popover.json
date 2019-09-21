@@ -1,0 +1,16 @@
+{
+  "properties": [
+    {
+      "name": "trigger",
+      "type": "HTMLElement",
+      "default": "",
+      "desc": "The HTML element that triggers the popover."
+    },
+    {
+      "name": "preferred-orientations",
+      "type": "Array<Orientation | '*'>",
+      "default": "[Orientation.Right, '*']",
+      "desc": "The preferred locations."
+    }
+  ]
+}

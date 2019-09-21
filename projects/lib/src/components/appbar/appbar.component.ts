@@ -29,6 +29,9 @@ export class AppBarComponent extends LegoBaseComponent {
   @Input('home-url')
   public homeUrl: string;
 
+  @Input()
+  public search = true;
+
   constructor(protected injector: Injector, @Optional() @SkipSelf() parent: Parent) {
     super(injector, parent);
   }

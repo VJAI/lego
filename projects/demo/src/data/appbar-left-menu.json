@@ -1,0 +1,22 @@
+{
+  "properties": [
+    {
+      "name": "url",
+      "type": "String",
+      "default": "",
+      "desc": "The url."
+    },
+    {
+      "name": "external",
+      "type": "Bool",
+      "default": "false",
+      "desc": "Pass `true` if it's an external url."
+    },
+    {
+      "name": "display",
+      "type": "String",
+      "default": "",
+      "desc": "The link display text."
+    }
+  ]
+}

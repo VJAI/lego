@@ -1,0 +1,28 @@
+{
+  "properties": [
+    {
+      "name": "logo",
+      "type": "String",
+      "default": "",
+      "desc": "The logo image url."
+    },
+    {
+      "name": "logo-width",
+      "type": "String | Number",
+      "default": "",
+      "desc": "The logo image width."
+    },
+    {
+      "name": "home-url",
+      "type": "String",
+      "default": "",
+      "desc": "The home page url."
+    },
+    {
+      "name": "search",
+      "type": "Bool",
+      "default": "true",
+      "desc": "Passing `false` will not render the search textbox."
+    }
+  ]
+}
