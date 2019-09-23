@@ -1,6 +1,6 @@
 ![LEGO](https://github.com/VJAI/lego/blob/master/projects/demo/src/assets/images/lego-375.png)
 
-[Lego](https://github.com/vjai/lego) is an UI library built on Angular. It provides set of UI components that helps to build single page apps quicker. It also provides you simple abstractions that helps to build new components easier.
+[Lego](https://vjai.github.io/lego) is an UI library built on Angular. It provides set of UI components that helps to build single page apps quicker. It also provides you simple abstractions that helps to build new components easier.
 
 ## Installing Lego
 
